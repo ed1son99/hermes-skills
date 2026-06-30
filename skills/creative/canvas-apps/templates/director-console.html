@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导演台 - Director Console</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "PingFang SC", sans-serif; background:#1a1a2e; color:#e0e0e0; overflow:hidden; height:100vh; display:flex; flex-direction:column; user-select:none; }
+
+/* Scene Tabs */
+#scene-tabs { display:flex; background:#16213e; padding:4px 8px 0; gap:4px; align-items:flex-end; min-height:36px; }
+#scene-tabs .tab { padding:6px 14px; background:#0f3460; border-radius:6px 6px 0 0; cursor:pointer; font-size:13px; color:#a0b0d0; transition:all .15s; white-space:nowrap; }
+#scene-tabs .tab.active { background:#1a1a3e; color:#fff; font-weight:600; }
+#scene-tabs .tab:hover:not(.active) { background:#153a6e; }
+#scene-tabs .add-scene { padding:6px 10px; cursor:pointer; color:#5a8; font-size:18px; line-height:1; }
+#scene-tabs .add-scene:hover { color:#7c8; }
+
+/* Main layout */
+#main { display:flex; flex:1; overflow:hidden; }
+
+/* Left sidebar */
+#sidebar-left { width:220px; background:#16213e; display:flex; flex-direction:column; padding:10px; gap:10px; overflow-y:auto; }
+.section-title { font-size:12px; text-transform:uppercase; color:#6a7a9a; letter-spacing:1px; margin-bottom:4px; }
+.item-list { flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:4px; min-height:30px; }
+.item-entry { display:flex; align-items:center; gap:6px; padding:6px 8px; background:#0f3460; border-radius:4px; cursor:pointer; font-size:13px; transition:background .15s; }
+.item-entry:hover { background:#153a6e; }
+.item-entry.selected { background:#1a5a8a; border:1px solid #3a9; }
+.item-entry .dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.item-entry .name { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.item-entry .del { cursor:pointer; opacity:0; font-size:14px; color:#f66; transition:opacity .15s; }
+.item-entry:hover .del { opacity:1; }
+.add-btn { padding:6px; background:#1a5a3a; border:none; color:#8c8; cursor:pointer; border-radius:4px; font-size:12px; width:100%; text-align:center; }
+.add-btn:hover { background:#1a6a4a; }
+
+/* Canvas area */
+#canvas-wrap { flex:1; position:relative; background:#1a1a2e; overflow:hidden; }
+#stage-canvas { width:100%; height:100%; cursor:grab; }
+#stage-canvas:active { cursor:grabbing; }
+
+/* Right sidebar */
+#sidebar-right { width:240px; background:#16213e; padding:10px; display:flex; flex-direction:column; gap:8px; overflow-y:auto; }
+#sidebar-right label { font-size:11px; color:#6a7a9a; display:block; margin-bottom:2px; }
+#sidebar-right input[type=text], #sidebar-right input[type=range], #sidebar-right select { width:100%; padding:6px; background:#0f3460; border:1px solid #2a4a7a; color:#e0e0e0; border-radius:4px; font-size:12px; }
+#sidebar-right input[type=range] { padding:0; accent-color:#3a9; }
+#sidebar-right input[type=color] { width:24px; height:24px; padding:0; border:none; cursor:pointer; }
+.prop-row { display:flex; align-items:center; gap:8px; }
+.prop-row input[type=text] { flex:1; }
+.prop-row input[type=color] { width:28px; }
+.prop-section { display:flex; flex-direction:column; gap:6px; padding:8px 0; border-bottom:1px solid #2a3a5a; }
+.prop-section:last-child { border-bottom:none; }
+.no-select { color:#4a5a7a; font-size:12px; text-align:center; padding:20px 0; }
+
+/* Toolbar overlay on canvas */
+#toolbar { position:absolute; top:10px; left:10px; display:flex; gap:6px; z-index:10; }
+#toolbar button { padding:6px 12px; background:#0f3460; border:1px solid #2a4a7a; color:#c0d0e0; border-radius:4px; cursor:pointer; font-size:12px; }
+#toolbar button:hover { background:#153a6e; }
+#toolbar button.active { background:#1a5a8a; border-color:#3a9; color:#fff; }
+
+/* Minimap */
+#minimap { position:absolute; bottom:10px; right:10px; width:160px; height:120px; background:#0a0a1e; border:1px solid #2a3a5a; border-radius:4px; overflow:hidden; z-index:10; }
+#minimap canvas { width:100%; height:100%; }
+
+/* Bottom bar */
+#bottom-bar { display:flex; background:#16213e; padding:6px 12px; gap:10px; align-items:center; font-size:12px; }
+#bottom-bar button { padding:5px 12px; background:#0f3460; border:1px solid #2a4a7a; color:#c0d0e0; border-radius:4px; cursor:pointer; font-size:12px; }
+#bottom-bar button:hover { background:#153a6e; }
+#bottom-bar button.primary { background:#1a5a3a; border-color:#3a8; }
+#bottom-bar button.primary:hover { background:#1a6a4a; }
+#bottom-bar select { padding:4px; background:#0f3460; border:1px solid #2a4a7a; color:#e0e0e0; border-radius:4px; font-size:12px; }
+#status { margin-left:auto; color:#4a5a7a; }
+</style>
+</head>
+<body>
+
+<div id="scene-tabs"></div>
+
+<div id="main">
+  <div id="sidebar-left">
+    <div>
+      <div class="section-title">🎭 人物</div>
+      <div class="item-list" id="char-list"></div>
+      <button class="add-btn" onclick="addCharacter()">+ 添加人物</button>
+    </div>
+    <div>
+      <div class="section-title">📦 道具</div>
+      <div class="item-list" id="prop-list"></div>
+      <button class="add-btn" onclick="addProp()">+ 添加道具</button>
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="stage-canvas"></canvas>
+    <div id="toolbar">
+      <button id="btn-select" class="active" onclick="setTool('select')">👆 选择</button>
+      <button id="btn-move" onclick="setTool('move')">✋ 拖动物体</button>
+      <button id="btn-grid" class="active" onclick="toggleGrid()">📐 网格</button>
+      <button onclick="resetCamera()">🔄 重置视角</button>
+    </div>
+    <div id="minimap">
+      <canvas id="minimap-canvas" width="160" height="120"></canvas>
+    </div>
+  </div>
+
+  <div id="sidebar-right">
+    <div id="props-panel">
+      <div class="no-select">← 选择人物或道具查看属性</div>
+    </div>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <button onclick="addScene()">+ 新建分镜</button>
+  <button onclick="duplicateScene()">⧉ 复制当前分镜</button>
+  <button onclick="deleteScene()">🗑 删除分镜</button>
+  <span style="margin:0 10px;color:#3a4a6a">|</span>
+  <span>画幅:</span>
+  <select onchange="setAspect(this.value)">
+    <option value="16:9">16:9</option>
+    <option value="2.35:1" selected>2.35:1 宽银幕</option>
+    <option value="4:3">4:3</option>
+    <option value="1:1">1:1</option>
+    <option value="9:16">9:16</option>
+  </select>
+  <button class="primary" onclick="exportProject()">💾 保存项目</button>
+  <button onclick="importProject()">📂 加载项目</button>
+  <button onclick="exportImage()">📷 导出图片</button>
+  <span id="status"></span>
+</div>
+
+<input type="file" id="import-file" style="display:none" accept=".json" onchange="handleImport(event)">
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const COLORS = ['#e74c3c','#e67e22','#f1c40f','#2ecc71','#1abc9c','#3498db','#9b59b6','#e91e63','#00bcd4','#ff5722'];
+const PROP_ICONS = ['🪑','📦','🚗','🌳','💡','🖼️','🪜','📺','🗄️','⚡'];
+
+let project = { scenes: [], activeScene: 0 };
+let selectedId = null;
+let tool = 'select';
+let showGrid = true;
+let aspectRatio = '2.35:1';
+let dragTarget = null;
+let dragOffset = {x:0, y:0};
+let zoom = 1, panX = 0, panY = 0;
+let isPanning = false;
+let panStart = {x:0, y:0};
+let touchPanStart = null;
+let lastTouchDist = 0;
+
+// ============================================================
+// DATA MODEL — unique IDs with counter
+// ============================================================
+let _idCounter = 0;
+function uid(prefix) { return prefix + '_' + Date.now() + '_' + (++_idCounter); }
+
+function newScene(name) {
+  return { id: uid('scene'), name: name || '分镜 '+(project.scenes.length+1), items: [], camera: { zoom:1, panX:0, panY:0 } };
+}
+
+function newChar(name, color) {
+  return { id: uid('char'), type: 'character', name: name || '角色',
+    color: color || COLORS[Math.floor(Math.random()*COLORS.length)],
+    x: 200 + Math.random()*300, y: 300 + Math.random()*100,
+    z: 0, rotation: 0, scale: 1.0, pose: 'stand' };
+}
+
+function newProp(name) {
+  return { id: uid('prop'), type: 'prop', name: name || '道具', icon: '📦',
+    x: 300 + Math.random()*200, y: 300 + Math.random()*100,
+    z: 0, rotation: 0, scale: 1.0 };
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  const s1 = newScene('第一场');
+  s1.items.push(newChar('主角', '#e74c3c'));
+  s1.items.push(newChar('配角A', '#3498db'));
+  s1.items.push(newProp('桌子'));
+  project.scenes.push(s1);
+  const s2 = newScene('第二场');
+  s2.items.push(newChar('主角', '#e74c3c'));
+  s2.items.push(newChar('配角B', '#9b59b6'));
+  s2.items.push(newProp('椅子'));
+  project.scenes.push(s2);
+  renderSceneTabs(); renderLists(); renderCanvas(); setupCanvas();
+  document.addEventListener('keydown', handleKey);
+}
+
+function getScene() { return project.scenes[project.activeScene]; }
+
+// ============================================================
+// SCENE TABS
+// ============================================================
+function renderSceneTabs() {
+  document.getElementById('scene-tabs').innerHTML = project.scenes.map((s, i) =>
+    `<div class="tab${i===project.activeScene?' active':''}" onclick="switchScene(${i})" ondblclick="renameScene(${i})">${s.name}</div>`
+  ).join('') + '<div class="add-scene" onclick="addScene()" title="添加分镜">+</div>';
+}
+
+function switchScene(i) {
+  if (i === project.activeScene) return;
+  const cur = getScene(); cur.camera = { zoom, panX, panY };
+  project.activeScene = i;
+  const s = getScene(); zoom = s.camera.zoom; panX = s.camera.panX; panY = s.camera.panY; selectedId = null;
+  renderSceneTabs(); renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+function addScene() {
+  const name = prompt('分镜名称：', '分镜 '+(project.scenes.length+1));
+  if (!name) return;
+  const cur = getScene(); cur.camera = { zoom, panX, panY };
+  project.scenes.push(newScene(name)); project.activeScene = project.scenes.length - 1;
+  zoom = 1; panX = 0; panY = 0; selectedId = null;
+  renderSceneTabs(); renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+function duplicateScene() {
+  const src = getScene();
+  const copy = JSON.parse(JSON.stringify(src));
+  copy.id = uid('scene'); copy.name = src.name + ' (副本)';
+  copy.items.forEach(it => it.id = uid(it.type === 'character' ? 'char' : 'prop'));
+  src.camera = { zoom, panX, panY };
+  project.scenes.splice(project.activeScene + 1, 0, copy); project.activeScene++;
+  zoom = 1; panX = 0; panY = 0;
+  renderSceneTabs(); renderLists(); renderCanvas();
+}
+
+function deleteScene() {
+  if (project.scenes.length <= 1) { alert('至少保留一个分镜'); return; }
+  if (!confirm('删除当前分镜 "'+getScene().name+'"?')) return;
+  project.scenes.splice(project.activeScene, 1);
+  if (project.activeScene >= project.scenes.length) project.activeScene = project.scenes.length - 1;
+  zoom = 1; panX = 0; panY = 0;
+  renderSceneTabs(); renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+function renameScene(i) {
+  const name = prompt('重命名：', project.scenes[i].name);
+  if (name) { project.scenes[i].name = name; renderSceneTabs(); }
+}
+
+// ============================================================
+// SIDEBAR LISTS
+// ============================================================
+function renderLists() {
+  const scene = getScene();
+  const chars = scene.items.filter(i => i.type === 'character');
+  const props = scene.items.filter(i => i.type === 'prop');
+  document.getElementById('char-list').innerHTML = chars.map(c =>
+    `<div class="item-entry${c.id===selectedId?' selected':''}" onclick="selectItem('${c.id}')">
+       <span class="dot" style="background:${c.color}"></span><span class="name">${c.name}</span>
+       <span class="del" onclick="event.stopPropagation();deleteItem('${c.id}')">✕</span></div>`
+  ).join('') || '<div style="color:#4a5a7a;font-size:11px;text-align:center;padding:10px">暂无人物</div>';
+  document.getElementById('prop-list').innerHTML = props.map(p =>
+    `<div class="item-entry${p.id===selectedId?' selected':''}" onclick="selectItem('${p.id}')">
+       <span>${p.icon}</span><span class="name">${p.name}</span>
+       <span class="del" onclick="event.stopPropagation();deleteItem('${p.id}')">✕</span></div>`
+  ).join('') || '<div style="color:#4a5a7a;font-size:11px;text-align:center;padding:10px">暂无道具</div>';
+}
+
+function selectItem(id) { selectedId = id; renderLists(); renderCanvas(); renderPropsPanel(); }
+
+function deleteItem(id) {
+  const scene = getScene(); scene.items = scene.items.filter(i => i.id !== id);
+  if (selectedId === id) selectedId = null;
+  renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+// ============================================================
+// ADD CHARACTER / PROP
+// ============================================================
+function addCharacter() {
+  const name = prompt('角色名称：', '角色'+(getScene().items.filter(i=>i.type==='character').length+1));
+  if (!name) return;
+  const c = newChar(name); getScene().items.push(c); selectedId = c.id;
+  renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+function addProp() {
+  const name = prompt('道具名称：', '道具'+(getScene().items.filter(i=>i.type==='prop').length+1));
+  if (!name) return;
+  const p = newProp(name); getScene().items.push(p); selectedId = p.id;
+  renderLists(); renderCanvas(); renderPropsPanel();
+}
+
+// ============================================================
+// PROPERTIES PANEL
+// ============================================================
+function renderPropsPanel() {
+  if (!selectedId) { document.getElementById('props-panel').innerHTML = '<div class="no-select">← 选择人物或道具查看属性</div>'; return; }
+  const item = getScene().items.find(i => i.id === selectedId);
+  if (!item) { document.getElementById('props-panel').innerHTML = ''; return; }
+  let html = item.type === 'character' ? `
+    <div class="prop-section"><label>名称</label><input type="text" value="${item.name}" onchange="updateProp('name', this.value)"></div>
+    <div class="prop-section"><label>颜色</label><div class="prop-row"><input type="color" value="${item.color}" onchange="updateProp('color', this.value)"><span style="font-size:12px">${item.color}</span></div></div>
+    <div class="prop-section"><label>姿态</label><select onchange="updateProp('pose', this.value)">
+      <option value="stand" ${item.pose==='stand'?'selected':''}>站立</option>
+      <option value="sit" ${item.pose==='sit'?'selected':''}>坐下</option>
+      <option value="walk" ${item.pose==='walk'?'selected':''}>行走</option>
+      <option value="action" ${item.pose==='action'?'selected':''}>动作</option></select></div>
+  ` : `
+    <div class="prop-section"><label>名称</label><input type="text" value="${item.name}" onchange="updateProp('name', this.value)"></div>
+    <div class="prop-section"><label>图标</label><select onchange="updateProp('icon', this.value)">
+      ${PROP_ICONS.map(ic => `<option value="${ic}" ${item.icon===ic?'selected':''}>${ic}</option>`).join('')}</select></div>`;
+  html += `
+    <div class="prop-section"><label>大小: ${item.scale.toFixed(1)}</label><input type="range" min="0.3" max="3" step="0.1" value="${item.scale}" oninput="updateProp('scale', parseFloat(this.value))"></div>
+    <div class="prop-section"><label>朝向: ${item.rotation}°</label><input type="range" min="-180" max="180" step="15" value="${item.rotation}" oninput="updateProp('rotation', parseInt(this.value))"></div>
+    <div class="prop-section"><label>景深 (Z): ${item.z}</label><input type="range" min="-80" max="80" value="${item.z}" oninput="updateProp('z', parseInt(this.value))"></div>
+    <div class="prop-section"><label>坐标 X:${Math.round(item.x)} Y:${Math.round(item.y)}</label></div>`;
+  document.getElementById('props-panel').innerHTML = html;
+}
+
+function updateProp(key, value) {
+  const item = getScene().items.find(i => i.id === selectedId);
+  if (!item) return;
+  item[key] = value;
+  renderCanvas(); renderLists();
+  if (['scale','rotation','z'].includes(key)) renderPropsPanel();
+}
+
+// ============================================================
+// CANVAS RENDERING
+// ============================================================
+function setupCanvas() {
+  const canvas = document.getElementById('stage-canvas');
+  const wrap = document.getElementById('canvas-wrap');
+  function resize() { canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight; renderCanvas(); }
+  resize(); window.addEventListener('resize', resize);
+  canvas.addEventListener('mousedown', onMouseDown);
+  canvas.addEventListener('mousemove', onMouseMove);
+  canvas.addEventListener('mouseup', onMouseUp);
+  canvas.addEventListener('wheel', onWheel, {passive:false});
+  canvas.addEventListener('dblclick', onDblClick);
+  canvas.addEventListener('touchstart', onTouchStart, {passive:false});
+  canvas.addEventListener('touchmove', onTouchMove, {passive:false});
+  canvas.addEventListener('touchend', onTouchEnd);
+}
+
+function getCanvas() { return document.getElementById('stage-canvas'); }
+
+function renderCanvas() {
+  const canvas = getCanvas(); if (!canvas) return;
+  const ctx = canvas.getContext('2d'); const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#1a1a2e'; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.translate(W/2 + panX, H/2 + panY); ctx.scale(zoom, zoom);
+  const SW = 900, SH = 600, sx = -SW/2, sy = -SH/2;
+  ctx.fillStyle = '#252540'; ctx.fillRect(sx, sy, SW, SH);
+  if (showGrid) drawGrid(ctx, sx, sy, SW, SH);
+  const horizonY = sy + SH * 0.4;
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 1; ctx.setLineDash([8, 12]);
+  ctx.beginPath(); ctx.moveTo(sx, horizonY); ctx.lineTo(sx + SW, horizonY); ctx.stroke(); ctx.setLineDash([]);
+  drawCameraFrame(ctx, SW, SH);
+  const items = [...getScene().items].sort((a,b) => b.z - a.z);
+  for (const item of items) {
+    item.type === 'character' ? drawChar(ctx, item) : drawPropShape(ctx, item);
+  }
+  ctx.restore();
+  drawMinimap();
+  const scene = getScene();
+  document.getElementById('status').textContent = `缩放:${zoom.toFixed(1)}x | 人物:${scene.items.filter(i=>i.type==='character').length} 道具:${scene.items.filter(i=>i.type==='prop').length}`;
+}
+
+function drawGrid(ctx, sx, sy, sw, sh) {
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+  for (let x=sx; x<=sx+sw; x+=60) { ctx.beginPath(); ctx.moveTo(x,sy); ctx.lineTo(x,sy+sh); ctx.stroke(); }
+  for (let y=sy; y<=sy+sh; y+=60) { ctx.beginPath(); ctx.moveTo(sx,y); ctx.lineTo(sx+sw,y); ctx.stroke(); }
+}
+
+function drawCameraFrame(ctx, SW, SH) {
+  const [rw, rh] = aspectRatio.split(':').map(Number);
+  const maxW = SW * 0.85, maxH = SH * 0.85;
+  const fw = rw/rh > maxW/maxH ? maxW : maxH * (rw/rh);
+  const fh = rw/rh > maxW/maxH ? maxW * (rh/rw) : maxH;
+  const fx = -fw/2, fy = -fh/2;
+  ctx.strokeStyle = 'rgba(255,255,255,0.25)'; ctx.lineWidth = 2; ctx.strokeRect(fx, fy, fw, fh);
+  ctx.strokeStyle = 'rgba(255,255,255,0.08)'; ctx.lineWidth = 1; ctx.setLineDash([4, 8]);
+  for (let i=1; i<3; i++) { const lx=fx+fw*(i/3); ctx.beginPath(); ctx.moveTo(lx,fy); ctx.lineTo(lx,fy+fh); ctx.stroke();
+    const ly=fy+fh*(i/3); ctx.beginPath(); ctx.moveTo(fx,ly); ctx.lineTo(fx+fw,ly); ctx.stroke(); }
+  ctx.setLineDash([]);
+}
+
+function drawChar(ctx, ch) {
+  const {x, y, z, rotation, scale, color, name, pose} = ch;
+  const df = 1 + z * 0.008, aS = scale * df, aY = y + z * 1.5;
+  ctx.save(); ctx.translate(x, aY); ctx.rotate(rotation * Math.PI / 180); ctx.scale(aS, aS);
+  ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.beginPath(); ctx.ellipse(0, 28, 18, 6, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = color;
+  if (pose === 'sit') {
+    ctx.beginPath(); ctx.arc(0, -18, 10, 0, Math.PI*2); ctx.fill();
+    ctx.fillRect(-10, -8, 20, 18); ctx.fillRect(-10, 10, 20, 8);
+    ctx.fillRect(-18, 18, 8, 6); ctx.fillRect(10, 18, 8, 6);
+  } else {
+    ctx.beginPath(); ctx.arc(0, -22, 9, 0, Math.PI*2); ctx.fill();
+    ctx.fillRect(-8, -13, 16, 20);
+    ctx.fillRect(-14, -10, 6, 16); ctx.fillRect(8, -10, 6, 16);
+    ctx.fillRect(-6, 7, 5, 20); ctx.fillRect(3, 7, 5, 20);
+  }
+  ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.beginPath(); ctx.arc(0, -24, 3, 0, Math.PI*2); ctx.fill();
+  if (ch.id === selectedId) {
+    ctx.strokeStyle = '#3a9'; ctx.lineWidth = 2/aS; ctx.setLineDash([4, 4]);
+    ctx.strokeRect(-22, -30, 44, 60); ctx.setLineDash([]);
+  }
+  ctx.restore();
+  ctx.save(); ctx.translate(x, aY - 40 * aS);
+  ctx.scale(1/zoom, 1/zoom);
+  ctx.fillStyle = ch.id === selectedId ? '#3a9' : '#c0d0e0'; ctx.font = 'bold 12px sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText(name, 0, 0); ctx.restore();
+}
+
+function drawPropShape(ctx, prop) {
+  const {x, y, z, rotation, scale, name, icon} = prop;
+  const df = 1 + z * 0.008, aS = scale * df, aY = y + z * 1.5;
+  ctx.save(); ctx.translate(x, aY); ctx.rotate(rotation * Math.PI / 180); ctx.scale(aS, aS);
+  ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(0, 18, 24, 8, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = '#3a4a5a'; ctx.fillRect(-20, -8, 40, 24);
+  ctx.fillStyle = '#e0e0e0'; ctx.font = `${18/aS}px sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(icon, 0, 4);
+  if (prop.id === selectedId) {
+    ctx.strokeStyle = '#3a9'; ctx.lineWidth = 2/aS; ctx.setLineDash([4, 4]);
+    ctx.strokeRect(-24, -14, 48, 36); ctx.setLineDash([]);
+  }
+  ctx.restore();
+  ctx.save(); ctx.translate(x, aY - 28 * aS);
+  ctx.scale(1/zoom, 1/zoom);
+  ctx.fillStyle = prop.id === selectedId ? '#3a9' : '#c0d0e0'; ctx.font = '11px sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText(name, 0, 0); ctx.restore();
+}
+
+function drawMinimap() {
+  const canvas = document.getElementById('minimap-canvas'), ctx = canvas.getContext('2d'), W=160, H=120;
+  ctx.clearRect(0, 0, W, H); ctx.fillStyle = '#0a0a1e'; ctx.fillRect(0, 0, W, H);
+  const minX=-450, maxX=450, minY=-300, maxY=300, sx=W/(maxX-minX), sy=H/(maxY-minY);
+  function toMap(wx,wy) { return [(wx-minX)*sx, (wy-minY)*sy]; }
+  for (const item of getScene().items) {
+    const [ix,iy] = toMap(item.x, item.y);
+    ctx.fillStyle = item.type === 'character' ? item.color : '#5a6a7a';
+    ctx.beginPath(); ctx.arc(ix, iy, item.type==='character'?4:3, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.strokeStyle = 'rgba(60,170,150,0.5)'; ctx.lineWidth = 1; ctx.strokeRect(W/4, H/4, W/2, H/2);
+}
+
+// ============================================================
+// INTERACTION — pan-first model
+// ============================================================
+function canvasToWorld(e) {
+  const canvas = getCanvas(), rect = canvas.getBoundingClientRect();
+  return { x: (e.clientX-rect.left - canvas.width/2 - panX) / zoom,
+           y: (e.clientY-rect.top - canvas.height/2 - panY) / zoom };
+}
+
+function hitTest(wx, wy) {
+  const items = [...getScene().items].sort((a,b) => a.z - b.z);
+  for (const item of items) {
+    const dz = 1 + item.z * 0.008, adjY = item.y + item.z * 1.5;
+    const hs = item.type === 'character' ? 25 * item.scale * dz : 30 * item.scale * dz;
+    if (Math.abs(wx - item.x) < hs && Math.abs(wy - adjY) < hs * 1.5) return item;
+  }
+  return null;
+}
+
+function onMouseDown(e) {
+  if (e.button !== 0) return;
+  isPanning = true; panStart = { x: e.clientX - panX, y: e.clientY - panY }; dragTarget = null;
+  const pos = canvasToWorld(e);
+  const hit = hitTest(pos.x, pos.y);
+  if (hit) {
+    if (tool === 'move') {
+      isPanning = false; dragTarget = hit;
+      const dz = 1 + hit.z * 0.008, adjY = hit.y + hit.z * 1.5;
+      dragOffset = { x: pos.x - hit.x, y: pos.y - adjY };
+      selectItem(hit.id);
+    } else { selectItem(hit.id); }
+  } else { selectedId = null; renderLists(); renderCanvas(); renderPropsPanel(); }
+}
+
+function onMouseMove(e) {
+  if (isPanning) { panX = e.clientX - panStart.x; panY = e.clientY - panStart.y; renderCanvas(); return; }
+  if (dragTarget && tool === 'move') {
+    const pos = canvasToWorld(e); dragTarget.x = Math.round(pos.x - dragOffset.x);
+    const dz = 1 + dragTarget.z * 0.008; dragTarget.y = Math.round(pos.y - dragOffset.y - dragTarget.z * 1.5);
+    renderCanvas();
+  }
+}
+
+function onMouseUp(e) {
+  if (isPanning) { isPanning = false; renderCanvas(); return; }
+  if (dragTarget) { dragTarget = null; renderCanvas(); renderPropsPanel(); }
+}
+
+function onWheel(e) { e.preventDefault(); zoom = Math.max(0.2, Math.min(3, zoom * (e.deltaY>0?0.9:1.1))); renderCanvas(); }
+
+function onDblClick(e) {
+  const pos = canvasToWorld(e); const hit = hitTest(pos.x, pos.y);
+  if (hit) { const nn = prompt('重命名：', hit.name); if (nn) { hit.name = nn; renderLists(); renderCanvas(); renderPropsPanel(); } }
+}
+
+function onTouchStart(e) {
+  e.preventDefault();
+  if (e.touches.length === 1) {
+    touchPanStart = { x: e.touches[0].clientX - panX, y: e.touches[0].clientY - panY }; isPanning = true; dragTarget = null;
+    const pos = canvasToWorld(e.touches[0]); const hit = hitTest(pos.x, pos.y);
+    if (hit) {
+      if (tool === 'move') { isPanning = false; dragTarget = hit; const dz = 1 + hit.z * 0.008, adjY = hit.y + hit.z * 1.5; dragOffset = { x: pos.x - hit.x, y: pos.y - adjY }; selectItem(hit.id); }
+      else { selectItem(hit.id); }
+    }
+  } else if (e.touches.length === 2) {
+    isPanning = false; dragTarget = null;
+    lastTouchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+    touchPanStart = { x: ((e.touches[0].clientX + e.touches[1].clientX)/2) - panX, y: ((e.touches[0].clientY + e.touches[1].clientY)/2) - panY };
+  }
+}
+
+function onTouchMove(e) {
+  e.preventDefault();
+  if (e.touches.length === 2) {
+    const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+    if (lastTouchDist > 0) zoom = Math.max(0.2, Math.min(3, zoom * (dist / lastTouchDist)));
+    lastTouchDist = dist;
+    const cx = (e.touches[0].clientX + e.touches[1].clientX) / 2, cy = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+    panX = cx - touchPanStart.x; panY = cy - touchPanStart.y;
+    renderCanvas();
+  } else if (e.touches.length === 1 && isPanning && touchPanStart) {
+    panX = e.touches[0].clientX - touchPanStart.x; panY = e.touches[0].clientY - touchPanStart.y; renderCanvas();
+  } else if (e.touches.length === 1 && dragTarget && tool === 'move') {
+    const pos = canvasToWorld(e.touches[0]); dragTarget.x = Math.round(pos.x - dragOffset.x);
+    const dz = 1 + dragTarget.z * 0.008; dragTarget.y = Math.round(pos.y - dragOffset.y - dragTarget.z * 1.5); renderCanvas();
+  }
+}
+
+function onTouchEnd(e) {
+  lastTouchDist = 0; touchPanStart = null; isPanning = false; dragTarget = null; renderCanvas();
+}
+
+// ============================================================
+// TOOLS
+// ============================================================
+function setTool(t) { tool = t;
+  document.getElementById('btn-select').classList.toggle('active', t==='select');
+  document.getElementById('btn-move').classList.toggle('active', t==='move');
+}
+
+function toggleGrid() { showGrid = !showGrid;
+  document.getElementById('btn-grid').classList.toggle('active', showGrid); renderCanvas(); }
+function resetCamera() { zoom = 1; panX = 0; panY = 0; renderCanvas(); }
+function setAspect(val) { aspectRatio = val; renderCanvas(); }
+
+// ============================================================
+// KEYBOARD
+// ============================================================
+function handleKey(e) {
+  if ((e.key === 'Delete' || e.key === 'Backspace') && selectedId && document.activeElement === document.body) deleteItem(selectedId);
+  if (e.key === 'Escape') { selectedId = null; renderLists(); renderCanvas(); renderPropsPanel(); }
+}
+
+// ============================================================
+// EXPORT / IMPORT
+// ============================================================
+function exportProject() {
+  const cur = getScene(); cur.camera = { zoom, panX, panY };
+  const blob = new Blob([JSON.stringify(project, null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'director-project-' + new Date().toISOString().slice(0,10) + '.json'; a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importProject() { document.getElementById('import-file').click(); }
+
+function handleImport(event) {
+  const file = event.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!data.scenes || !Array.isArray(data.scenes)) throw new Error('Invalid format');
+      project = data; project.activeScene = Math.min(project.activeScene, project.scenes.length - 1);
+      const s = getScene(); zoom = s.camera?.zoom || 1; panX = s.camera?.panX || 0; panY = s.camera?.panY || 0;
+      selectedId = null; renderSceneTabs(); renderLists(); renderCanvas(); renderPropsPanel();
+    } catch(err) { alert('加载失败：' + err.message); }
+  };
+  reader.readAsText(file); event.target.value = '';
+}
+
+function exportImage() {
+  const a = document.createElement('a'); a.download = 'director-shot-' + Date.now() + '.png';
+  a.href = getCanvas().toDataURL(); a.click();
+}
+
+init();
+</script>
+</body>
+</html>

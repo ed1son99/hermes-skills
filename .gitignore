@@ -1,0 +1,8 @@
+.curator_backups/
+.bundled_manifest
+.curator_state
+.usage.json
+.usage.json.lock
+.DS_Store
+*.pyc
+__pycache__/

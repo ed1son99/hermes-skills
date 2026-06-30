@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Scene</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, sans-serif; background:#1a1a2e; color:#e0e0e0; overflow:hidden; height:100vh; }
+#canvas-wrap { width:100vw; height:100vh; position:relative; }
+canvas { display:block; cursor:grab; }
+canvas:active { cursor:grabbing; }
+#info { position:absolute; bottom:10px; left:10px; color:#4a5a7a; font-size:12px; z-index:10; }
+</style>
+</head>
+<body>
+<div id="canvas-wrap">
+  <canvas id="c"></canvas>
+  <div id="info"></div>
+</div>
+<script>
+// ===== STATE =====
+const App = {
+  camAzimuth: 30, camElevation: 50, camDistance: 600,
+  camTargetX: 0, camTargetZ: 0,
+  items: [],
+  isOrbiting: false, orbitStart: null,
+  isPanning: false, panStart: null,
+  tool: 'orbit' // 'orbit' | 'pan' | 'move'
+};
+
+// ===== MATH =====
+function d2r(d) { return d*Math.PI/180; }
+function r2d(r) { return r*180/Math.PI; }
+
+function camPos() {
+  const az=d2r(App.camAzimuth), el=d2r(App.camElevation);
+  return {
+    x: App.camTargetX + App.camDistance*Math.cos(el)*Math.sin(az),
+    y: App.camDistance*Math.sin(el),
+    z: App.camTargetZ + App.camDistance*Math.cos(el)*Math.cos(az)
+  };
+}
+
+function proj(wx, wy, wz) {
+  const cam = camPos();
+  const fx=App.camTargetX-cam.x, fy=-cam.y, fz=App.camTargetZ-cam.z;
+  const fl=Math.sqrt(fx*fx+fy*fy+fz*fz)||1;
+  const fwd={x:fx/fl,y:fy/fl,z:fz/fl};
+  const up={x:0,y:1,z:0};
+  const rt={x:up.y*fwd.z-up.z*fwd.y, y:up.z*fwd.x-up.x*fwd.z, z:up.x*fwd.y-up.y*fwd.x};
+  const rl=Math.sqrt(rt.x*rt.x+rt.y*rt.y+rt.z*rt.z)||1;
+  rt.x/=rl; rt.y/=rl; rt.z/=rl;
+  const cup={x:fwd.y*rt.z-fwd.z*rt.y, y:fwd.z*rt.x-fwd.x*rt.z, z:fwd.x*rt.y-fwd.y*rt.x};
+  const dx=wx-cam.x, dy=wy-cam.y, dz=wz-cam.z;
+  const cx=dx*rt.x+dy*rt.y+dz*rt.z;
+  const cy=dx*cup.x+dy*cup.y+dz*cup.z;
+  const cz=dx*fwd.x+dy*fwd.y+dz*fwd.z;
+  if (cz<=1) return null;
+  const s=600/cz;
+  return {x:cx*s, y:-cy*s, z:cz};
+}
+
+// ===== RENDER =====
+function render() {
+  const c=document.getElementById('c'), ctx=c.getContext('2d');
+  const W=c.width, H=c.height, CX=W/2, CY=H/2;
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#1a1a2e'; ctx.fillRect(0,0,W,H);
+  
+  // Ground grid
+  const SZ=300, ST=25;
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=1;
+  for (let x=-SZ; x<=SZ; x+=ST) {
+    ctx.beginPath();
+    for (let z=-SZ; z<=SZ; z+=SZ/20) { const p=proj(x,0,z); if(p&&p.z>0) ctx.lineTo(CX+p.x,CY+p.y); }
+    ctx.stroke();
+  }
+  for (let z=-SZ; z<=SZ; z+=ST) {
+    ctx.beginPath();
+    for (let x=-SZ; x<=SZ; x+=SZ/20) { const p=proj(x,0,z); if(p&&p.z>0) ctx.lineTo(CX+p.x,CY+p.y); }
+    ctx.stroke();
+  }
+  
+  // Items sorted by distance
+  const cam=camPos();
+  const sorted=[...App.items].map(it=>({it, d:(it.x-cam.x)**2+(it.z-cam.z)**2})).sort((a,b)=>b.d-a.d);
+  
+  for (const {it} of sorted) {
+    const h=it.h||50;
+    const pb=proj(it.x,0,it.z), pt=proj(it.x,h,it.z);
+    if (!pb||!pt||pb.z<=0) continue;
+    const sx=CX+pb.x, sy=CY+pb.y, tx=CX+pt.x, ty=CY+pt.y;
+    const fH=sy-ty;
+    if (fH<3) continue;
+    
+    // Shadow
+    const bw=fH*0.28;
+    ctx.fillStyle='rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(sx,sy,bw*0.7,bw*0.25,0,0,Math.PI*2); ctx.fill();
+    // Body
+    ctx.fillStyle=it.c||'#e74c3c'; ctx.beginPath();
+    ctx.moveTo(sx-bw,sy); ctx.lineTo(sx+bw,sy); ctx.lineTo(sx+bw*0.6,ty+fH*0.15); ctx.lineTo(sx-bw*0.6,ty+fH*0.15);
+    ctx.closePath(); ctx.fill();
+    // Head
+    const hr=fH*0.15;
+    ctx.beginPath(); ctx.arc(tx,ty,hr,0,Math.PI*2); ctx.fill();
+    // Label
+    if (fH>10) { ctx.fillStyle='#c0d0e0'; ctx.font='bold 11px sans-serif'; ctx.textAlign='center'; ctx.fillText(it.n||'',tx,ty-hr-8); }
+  }
+  
+  document.getElementById('info').textContent = `视角:${App.camAzimuth.toFixed(0)}° | 距离:${App.camDistance.toFixed(0)}`;
+}
+
+// ===== MOUSE =====
+function setup() {
+  const c=document.getElementById('c'), w=document.getElementById('canvas-wrap');
+  function resize() { c.width=w.clientWidth; c.height=w.clientHeight; render(); }
+  resize(); window.addEventListener('resize',resize);
+  
+  let orbStart=null, panStart=null;
+  
+  c.addEventListener('mousedown',e=>{
+    if (e.button===2||(e.button===0&&e.shiftKey)) {
+      e.preventDefault();
+      App.isPanning=true; App.panStart={x:e.clientX,y:e.clientY,tx:App.camTargetX,tz:App.camTargetZ};
+    } else if (e.button===0) {
+      App.isOrbiting=true; App.orbitStart={az:App.camAzimuth,el:App.camElevation,x:e.clientX,y:e.clientY};
+    }
+  });
+  
+  c.addEventListener('mousemove',e=>{
+    if (App.isPanning) {
+      const s=App.camDistance/400;
+      App.camTargetX=App.panStart.tx-(e.clientX-App.panStart.x)*s;
+      App.camTargetZ=App.panStart.tz+(e.clientY-App.panStart.y)*s;
+      render();
+    } else if (App.isOrbiting) {
+      App.camAzimuth=App.orbitStart.az-(e.clientX-App.orbitStart.x)*0.5;
+      App.camElevation=Math.max(5,Math.min(85,App.orbitStart.el+(e.clientY-App.orbitStart.y)*0.3));
+      render();
+    }
+  });
+  
+  c.addEventListener('mouseup',()=>{ App.isOrbiting=false; App.isPanning=false; });
+  c.addEventListener('wheel',e=>{ e.preventDefault(); App.camDistance=Math.max(100,Math.min(2000,App.camDistance*(e.deltaY>0?1.1:0.9))); render(); });
+  c.addEventListener('contextmenu',e=>e.preventDefault());
+}
+
+// ===== DEMO ITEMS =====
+App.items.push({x:-80,z:0,h:50,c:'#e74c3c',n:'Alice'});
+App.items.push({x:80,z:30,h:45,c:'#3498db',n:'Bob'});
+App.items.push({x:0,z:-60,h:40,c:'#2ecc71',n:'Charlie'});
+
+setup();
+</script>
+</body>
+</html>
