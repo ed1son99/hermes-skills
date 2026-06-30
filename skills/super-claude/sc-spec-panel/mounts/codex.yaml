@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-spec-panel"
+  short_description: "多专家规格审查和改进"
+  default_prompt: "Use $sc-spec-panel to help with sc spec panel tasks."
+policy:
+  allow_implicit_invocation: true

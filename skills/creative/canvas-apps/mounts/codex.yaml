@@ -1,0 +1,6 @@
+interface:
+  display_name: "canvas-apps"
+  short_description: "Build interactive single-file HTML canvas applications — drag-and-drop staging tools, director consoles, visual editors. Use when the user asks for a visual canvas tool with draggable elements, pan/zoom, touch gestures, or scene management."
+  default_prompt: "Use $canvas-apps to help with canvas apps tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "manim-video"
+  short_description: "Manim CE animations: 3Blue1Brown math/algo videos."
+  default_prompt: "Use $manim-video to help with manim video tasks."
+policy:
+  allow_implicit_invocation: true

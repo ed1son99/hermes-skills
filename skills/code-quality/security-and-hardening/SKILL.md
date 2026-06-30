@@ -1,8 +1,8 @@
 ---
 name: security-and-hardening
 description: 安全加固 — 防范漏洞
-category: code-quality
 triggers: [security, 安全, 漏洞, vulnerability, auth, 认证, 输入验证, OWASP]
+platforms: [claude-code, hermes, codex]
 ---
 
 # security-and-hardening

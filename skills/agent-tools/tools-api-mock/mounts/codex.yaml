@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-api-mock"
+  short_description: "API Mock 框架"
+  default_prompt: "Use $tools-api-mock to help with tools api mock tasks."
+policy:
+  allow_implicit_invocation: true

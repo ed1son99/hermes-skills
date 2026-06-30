@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-pr-enhance"
+  short_description: "PR 增强"
+  default_prompt: "Use $tools-pr-enhance to help with tools pr enhance tasks."
+policy:
+  allow_implicit_invocation: true

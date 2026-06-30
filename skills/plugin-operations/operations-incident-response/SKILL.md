@@ -1,8 +1,8 @@
 ---
 name: operations-incident-response
 description: 生产事件响应 — 紧急分诊、RCA、事后分析
-category: plugin-operations
 triggers: [incident, 事件, 故障, RCA, 事后分析, postmortem, 紧急]
+platforms: [claude-code, hermes, codex]
 ---
 
 # operations-incident-response

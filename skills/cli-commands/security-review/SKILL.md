@@ -1,8 +1,8 @@
 ---
 name: security-review
 description: CLI 安全审查 — 完成当前分支待处理变更的安全审查
-category: cli-commands
 triggers: [/security-review, security review, 安全审查, 漏洞审查]
+platforms: [claude-code, hermes, codex]
 ---
 
 # security-review

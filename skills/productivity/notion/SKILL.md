@@ -1,16 +1,8 @@
 ---
 name: notion
-description: "Notion API + ntn CLI: pages, databases, markdown, Workers."
-version: 2.0.0
-author: community
-license: MIT
-platforms: [linux, macos, windows]
-prerequisites:
-  env_vars: [NOTION_API_KEY]
-metadata:
-  hermes:
-    tags: [Notion, Productivity, Notes, Database, API, CLI, Workers]
-    homepage: https://developers.notion.com
+description: Notion API + ntn CLI: pages, databases, markdown, Workers.
+triggers: [notion, productivity, notes, database, api, cli, workers, notion api]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Notion

@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-monitor-setup"
+  short_description: "监控和可观测性设置"
+  default_prompt: "Use $tools-monitor-setup to help with tools monitor setup tasks."
+policy:
+  allow_implicit_invocation: true

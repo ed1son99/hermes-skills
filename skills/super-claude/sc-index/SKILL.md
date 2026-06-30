@@ -1,8 +1,8 @@
 ---
 name: sc-index
 description: 项目文档和知识库生成
-category: super-claude
 triggers: [sc:index, 索引, 知识库, 项目文档]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-index

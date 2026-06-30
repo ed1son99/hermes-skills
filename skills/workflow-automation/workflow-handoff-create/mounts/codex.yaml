@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-handoff-create"
+  short_description: "创建任务交接文档"
+  default_prompt: "Use $workflow-handoff-create to help with workflow handoff create tasks."
+policy:
+  allow_implicit_invocation: true

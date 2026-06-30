@@ -1,0 +1,6 @@
+interface:
+  display_name: "codebase-inspection"
+  short_description: "Inspect codebases w/ pygount: LOC, languages, ratios."
+  default_prompt: "Use $codebase-inspection to help with codebase inspection tasks."
+policy:
+  allow_implicit_invocation: true

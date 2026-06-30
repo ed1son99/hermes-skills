@@ -1,8 +1,8 @@
 ---
 name: sc-index-repo
 description: 仓库索引 — 94% token 减少 (58K → 3K)
-category: super-claude
 triggers: [sc:index-repo, 索引, repo index]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-index-repo

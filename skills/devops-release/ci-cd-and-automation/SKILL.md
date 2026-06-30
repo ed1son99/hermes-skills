@@ -1,8 +1,8 @@
 ---
 name: ci-cd-and-automation
 description: CI/CD 与自动化 — 构建和部署流水线配置
-category: devops-release
 triggers: [CI, CD, pipeline, 流水线, 自动化, build, deploy, GitHub Actions]
+platforms: [claude-code, hermes, codex]
 ---
 
 # ci-cd-and-automation

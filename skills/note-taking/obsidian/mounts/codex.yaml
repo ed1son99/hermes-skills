@@ -1,0 +1,6 @@
+interface:
+  display_name: "obsidian"
+  short_description: "Read, search, create, and edit notes in the Obsidian vault."
+  default_prompt: "Use $obsidian to help with obsidian tasks."
+policy:
+  allow_implicit_invocation: true

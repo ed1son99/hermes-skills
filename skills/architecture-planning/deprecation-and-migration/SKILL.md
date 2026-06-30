@@ -1,8 +1,8 @@
 ---
 name: deprecation-and-migration
 description: 弃用与迁移管理 — 安全地移除旧系统和迁移用户
-category: architecture-planning
 triggers: [deprecation, 弃用, migration, 迁移, sunset, 版本升级, 兼容性]
+platforms: [claude-code, hermes, codex]
 ---
 
 # deprecation-and-migration

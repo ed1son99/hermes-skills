@@ -1,8 +1,8 @@
 ---
 name: tools-tech-debt
 description: 技术债分析和修复
-category: agent-tools
 triggers: [tech debt, 技术债, 技术债务]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-tech-debt

@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-check-todos"
+  short_description: "查看并选择待办 TODO"
+  default_prompt: "Use $workflow-check-todos to help with workflow check todos tasks."
+policy:
+  allow_implicit_invocation: true

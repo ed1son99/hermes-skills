@@ -1,8 +1,8 @@
 ---
 name: sc-load
 description: 会话生命周期管理
-category: super-claude
 triggers: [sc:load, 加载, 会话, 上下文]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-load

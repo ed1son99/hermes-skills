@@ -1,8 +1,8 @@
 ---
 name: session-help
 description: 会话管理系统帮助
-category: session-management
 triggers: [/session-help, session, 会话帮助]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-help

@@ -1,8 +1,8 @@
 ---
 name: tools-onboard
 description: 项目入职引导
-category: agent-tools
 triggers: [onboard, 入职, 上手, 新项目, 入门]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-onboard

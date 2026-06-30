@@ -1,0 +1,6 @@
+interface:
+  display_name: "run"
+  short_description: "CLI 启动 — 启动并驱动项目应用查看变更效果"
+  default_prompt: "Use $run to help with run tasks."
+policy:
+  allow_implicit_invocation: true

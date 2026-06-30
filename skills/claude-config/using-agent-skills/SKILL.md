@@ -1,8 +1,8 @@
 ---
 name: using-agent-skills
 description: Agent Skill 发现与调用 — 元技能，管理所有其他 skill 的发现和调用
-category: claude-config
 triggers: [skill, agent, 技能, 发现, 调用, meta]
+platforms: [claude-code, hermes, codex]
 ---
 
 # using-agent-skills

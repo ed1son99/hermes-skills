@@ -1,8 +1,8 @@
 ---
 name: performance-optimization
 description: 性能优化 — 测量驱动的瓶颈消除
-category: code-quality
 triggers: [performance, 性能, optimization, 优化, bottleneck, 瓶颈, Core Web Vitals, profiling]
+platforms: [claude-code, hermes, codex]
 ---
 
 # performance-optimization

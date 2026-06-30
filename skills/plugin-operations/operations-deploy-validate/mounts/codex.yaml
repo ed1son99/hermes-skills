@@ -1,0 +1,6 @@
+interface:
+  display_name: "operations-deploy-validate"
+  short_description: "部署前验证 — 测试、安全检查、配置安全、环境就绪"
+  default_prompt: "Use $operations-deploy-validate to help with operations deploy validate tasks."
+policy:
+  allow_implicit_invocation: true

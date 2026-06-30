@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-security-scan"
+  short_description: "安全扫描和漏洞评估"
+  default_prompt: "Use $tools-security-scan to help with tools security scan tasks."
+policy:
+  allow_implicit_invocation: true

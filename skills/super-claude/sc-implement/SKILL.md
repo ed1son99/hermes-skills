@@ -1,8 +1,8 @@
 ---
 name: sc-implement
 description: 功能实现
-category: super-claude
 triggers: [sc:implement, 实现, 开发, 编码]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-implement

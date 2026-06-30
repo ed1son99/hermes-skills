@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-tdd-refactor"
+  short_description: "TDD Refactor 阶段 — 在测试保护下重构"
+  default_prompt: "Use $tools-tdd-refactor to help with tools tdd refactor tasks."
+policy:
+  allow_implicit_invocation: true

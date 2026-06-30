@@ -1,8 +1,8 @@
 ---
 name: tools-config-validate
 description: 配置验证
-category: agent-tools
 triggers: [config, 配置验证, 配置检查]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-config-validate

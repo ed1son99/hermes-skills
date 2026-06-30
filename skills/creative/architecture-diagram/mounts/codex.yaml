@@ -1,0 +1,6 @@
+interface:
+  display_name: "architecture-diagram"
+  short_description: "Dark-themed SVG architecture/cloud/infra diagrams as HTML."
+  default_prompt: "Use $architecture-diagram to help with architecture diagram tasks."
+policy:
+  allow_implicit_invocation: true

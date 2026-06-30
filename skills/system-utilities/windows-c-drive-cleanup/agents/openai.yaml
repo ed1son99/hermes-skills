@@ -1,7 +1,0 @@
-interface:
-  display_name: "Windows C 盘清理分级"
-  short_description: "只读盘点 Windows C 盘并生成删除风险分级表"
-  default_prompt: "Use $windows-c-drive-cleanup to inspect my Windows C drive and create a safe delete-risk table."
-
-policy:
-  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: workflow-review
 description: 综合代码审查工作流 — 安全、性能、配置安全分析
-category: workflow-automation
 triggers: [/review, workflow review, 审查, 综合审查]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-review

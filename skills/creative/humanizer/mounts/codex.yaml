@@ -1,0 +1,6 @@
+interface:
+  display_name: "humanizer"
+  short_description: "Humanize text: strip AI-isms and add real voice."
+  default_prompt: "Use $humanizer to help with humanizer tasks."
+policy:
+  allow_implicit_invocation: true

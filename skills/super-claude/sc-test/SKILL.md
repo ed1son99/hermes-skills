@@ -1,8 +1,8 @@
 ---
 name: sc-test
 description: 测试执行和分析
-category: super-claude
 triggers: [sc:test, 测试, 覆盖率, 质量报告]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-test

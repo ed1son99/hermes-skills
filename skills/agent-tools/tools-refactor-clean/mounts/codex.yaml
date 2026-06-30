@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-refactor-clean"
+  short_description: "重构和清理代码"
+  default_prompt: "Use $tools-refactor-clean to help with tools refactor clean tasks."
+policy:
+  allow_implicit_invocation: true

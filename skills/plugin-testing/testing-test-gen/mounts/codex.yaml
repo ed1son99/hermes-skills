@@ -1,0 +1,6 @@
+interface:
+  display_name: "testing-test-gen"
+  short_description: "测试套件自动生成 — 多框架支持"
+  default_prompt: "Use $testing-test-gen to help with testing test gen tasks."
+policy:
+  allow_implicit_invocation: true

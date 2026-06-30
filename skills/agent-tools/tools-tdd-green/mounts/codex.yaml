@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-tdd-green"
+  short_description: "TDD Green 阶段 — 实现最小代码使测试通过"
+  default_prompt: "Use $tools-tdd-green to help with tools tdd green tasks."
+policy:
+  allow_implicit_invocation: true

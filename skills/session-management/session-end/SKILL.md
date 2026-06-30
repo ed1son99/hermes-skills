@@ -1,8 +1,8 @@
 ---
 name: session-end
 description: 结束当前开发会话
-category: session-management
 triggers: [/session-end, session, 会话结束, 结束]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-end

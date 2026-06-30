@@ -1,0 +1,6 @@
+interface:
+  display_name: "google-workspace"
+  short_description: "Google OAuth2 client credentials (downloaded from Google Cloud Console)"
+  default_prompt: "Use $google-workspace to help with google workspace tasks."
+policy:
+  allow_implicit_invocation: true

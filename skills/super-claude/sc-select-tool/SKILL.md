@@ -1,8 +1,8 @@
 ---
 name: sc-select-tool
 description: 智能 MCP 工具选择
-category: super-claude
 triggers: [sc:select-tool, MCP, 工具选择]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-select-tool

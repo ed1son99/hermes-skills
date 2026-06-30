@@ -1,8 +1,8 @@
 ---
 name: shipping-and-launch
 description: 发布与上线 — 生产环境部署准备
-category: devops-release
 triggers: [deploy, 部署, launch, 上线, release, 发布, production, 生产环境, rollout]
+platforms: [claude-code, hermes, codex]
 ---
 
 # shipping-and-launch

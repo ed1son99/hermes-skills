@@ -1,8 +1,8 @@
 ---
 name: session-start
 description: 创建新的开发会话记录
-category: session-management
 triggers: [/session-start, session, 会话, 开始, 记录]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-start

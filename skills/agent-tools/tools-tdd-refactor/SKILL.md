@@ -1,8 +1,8 @@
 ---
 name: tools-tdd-refactor
 description: TDD Refactor 阶段 — 在测试保护下重构
-category: agent-tools
 triggers: [TDD refactor, 重构, 测试保护]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-tdd-refactor

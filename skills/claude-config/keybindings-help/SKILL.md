@@ -1,8 +1,8 @@
 ---
 name: keybindings-help
 description: 键盘快捷键自定义 — ~/.claude/keybindings.json 配置
-category: claude-config
 triggers: [keybinding, 快捷键, 键盘, shortcut, rebind, 绑定]
+platforms: [claude-code, hermes, codex]
 ---
 
 # keybindings-help

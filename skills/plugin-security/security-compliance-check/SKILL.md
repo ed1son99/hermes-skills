@@ -1,8 +1,8 @@
 ---
 name: security-compliance-check
 description: 合规验证 — GDPR, SOC2, HIPAA, PCI-DSS 等框架
-category: plugin-security
 triggers: [compliance, 合规, GDPR, SOC2, HIPAA, PCI-DSS, 法规]
+platforms: [claude-code, hermes, codex]
 ---
 
 # security-compliance-check

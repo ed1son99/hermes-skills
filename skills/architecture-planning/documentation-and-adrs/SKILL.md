@@ -1,8 +1,8 @@
 ---
 name: documentation-and-adrs
 description: 文档与架构决策记录 — 记录决策和文档
-category: architecture-planning
 triggers: [ADR, 架构决策, documentation, 文档, decision record, 设计决策]
+platforms: [claude-code, hermes, codex]
 ---
 
 # documentation-and-adrs

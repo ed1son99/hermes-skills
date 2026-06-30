@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-deploy-checklist"
+  short_description: "部署检查清单和配置"
+  default_prompt: "Use $tools-deploy-checklist to help with tools deploy checklist tasks."
+policy:
+  allow_implicit_invocation: true

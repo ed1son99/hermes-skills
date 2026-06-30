@@ -1,0 +1,6 @@
+interface:
+  display_name: "performance-optimization"
+  short_description: "性能优化 — 测量驱动的瓶颈消除"
+  default_prompt: "Use $performance-optimization to help with performance optimization tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: claude-api
 description: Claude API 参考 — 模型 ID、定价、参数、流式、工具使用、MCP
-category: claude-config
 triggers: [Claude API, Anthropic, SDK, model, 模型, pricing, 定价, token, streaming, MCP]
+platforms: [claude-code, hermes, codex]
 ---
 
 # claude-api

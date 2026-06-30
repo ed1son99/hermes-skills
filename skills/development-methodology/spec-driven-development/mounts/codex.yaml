@@ -1,0 +1,6 @@
+interface:
+  display_name: "spec-driven-development"
+  short_description: "规格驱动开发 — 先写规格再编码"
+  default_prompt: "Use $spec-driven-development to help with spec driven development tasks."
+policy:
+  allow_implicit_invocation: true

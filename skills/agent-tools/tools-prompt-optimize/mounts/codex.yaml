@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-prompt-optimize"
+  short_description: "AI Prompt 优化"
+  default_prompt: "Use $tools-prompt-optimize to help with tools prompt optimize tasks."
+policy:
+  allow_implicit_invocation: true

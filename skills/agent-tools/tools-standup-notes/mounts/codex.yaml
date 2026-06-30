@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-standup-notes"
+  short_description: "站会记录生成器"
+  default_prompt: "Use $tools-standup-notes to help with tools standup notes tasks."
+policy:
+  allow_implicit_invocation: true

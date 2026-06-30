@@ -1,8 +1,8 @@
 ---
 name: impeccable
 description: 前端界面设计精修 — 网站、Landing page、Dashboard、组件、表单
-category: design-system
 triggers: [design, redesign, 设计, 界面, UI, UX, 美化, 视觉, landing page, dashboard, 组件, 配色, 排版, 动效]
+platforms: [claude-code, hermes, codex]
 ---
 
 # impeccable

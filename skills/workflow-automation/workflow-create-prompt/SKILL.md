@@ -1,8 +1,8 @@
 ---
 name: workflow-create-prompt
 description: 创建优化的 XML 结构化 Prompt
-category: workflow-automation
 triggers: [/create-prompt, prompt, 提示词, 优化]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-create-prompt

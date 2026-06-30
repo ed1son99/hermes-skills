@@ -1,8 +1,8 @@
 ---
 name: sc-cleanup
 description: 系统化清理代码
-category: super-claude
 triggers: [sc:cleanup, 清理, 死代码, 优化]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-cleanup

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ai-pipeline-orchestrator"
+  short_description: "Orchestrate multi-AI pipelines: Hermes coordinates Claude (brain/reviewer) and Codex (executor/writer) in a chained workflow"
+  default_prompt: "Use $ai-pipeline-orchestrator to help with ai pipeline orchestrator tasks."
+policy:
+  allow_implicit_invocation: true

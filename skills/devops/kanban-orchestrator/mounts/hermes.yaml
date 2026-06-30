@@ -1,0 +1,5 @@
+version: "3.0.0"
+author: Hermes Agent
+license: MIT
+platforms: [linux, macos, windows]
+tags: [kanban, multi-agent, orchestration, routing]

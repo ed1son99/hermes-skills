@@ -1,8 +1,8 @@
 ---
 name: tools-pr-enhance
 description: PR 增强
-category: agent-tools
 triggers: [PR, pull request, 增强, 完善]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-pr-enhance

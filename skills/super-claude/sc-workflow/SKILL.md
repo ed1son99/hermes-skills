@@ -1,8 +1,8 @@
 ---
 name: sc-workflow
 description: 从 PRD 生成结构化实施工作流
-category: super-claude
 triggers: [sc:workflow, 工作流, PRD, 实施]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-workflow

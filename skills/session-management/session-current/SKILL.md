@@ -1,8 +1,8 @@
 ---
 name: session-current
 description: 显示当前会话状态
-category: session-management
 triggers: [/session-current, session, 当前会话, 状态]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-current

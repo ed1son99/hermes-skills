@@ -1,0 +1,6 @@
+interface:
+  display_name: "claude-design"
+  short_description: "Design one-off HTML artifacts (landing, deck, prototype)."
+  default_prompt: "Use $claude-design to help with claude design tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "nano-pdf"
+  short_description: "Edit PDF text/typos/titles via nano-pdf CLI (NL prompts)."
+  default_prompt: "Use $nano-pdf to help with nano pdf tasks."
+policy:
+  allow_implicit_invocation: true

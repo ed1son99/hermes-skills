@@ -1,0 +1,6 @@
+interface:
+  display_name: "graphify"
+  short_description: "Graphify — 将任何输入转化为持久知识图谱"
+  default_prompt: "Use $graphify to help with graphify tasks."
+policy:
+  allow_implicit_invocation: true

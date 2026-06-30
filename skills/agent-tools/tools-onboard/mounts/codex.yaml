@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-onboard"
+  short_description: "项目入职引导"
+  default_prompt: "Use $tools-onboard to help with tools onboard tasks."
+policy:
+  allow_implicit_invocation: true

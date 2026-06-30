@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-sc"
+  short_description: "SuperClaude 命令调度器"
+  default_prompt: "Use $sc-sc to help with sc sc tasks."
+policy:
+  allow_implicit_invocation: true

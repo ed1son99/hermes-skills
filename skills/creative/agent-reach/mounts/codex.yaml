@@ -1,0 +1,6 @@
+interface:
+  display_name: "agent-reach"
+  short_description: "全网调研 — 13 平台多后端路由搜索"
+  default_prompt: "Use $agent-reach to help with agent reach tasks."
+policy:
+  allow_implicit_invocation: true

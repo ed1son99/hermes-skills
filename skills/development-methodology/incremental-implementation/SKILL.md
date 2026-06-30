@@ -1,8 +1,8 @@
 ---
 name: incremental-implementation
 description: 增量实现 — 逐步交付变更
-category: development-methodology
 triggers: [incremental, 增量, 逐步, 分批, 迭代, small PRs]
+platforms: [claude-code, hermes, codex]
 ---
 
 # incremental-implementation

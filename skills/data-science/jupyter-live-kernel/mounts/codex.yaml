@@ -1,0 +1,6 @@
+interface:
+  display_name: "jupyter-live-kernel"
+  short_description: "Iterative Python via live Jupyter kernel (hamelnb)."
+  default_prompt: "Use $jupyter-live-kernel to help with jupyter live kernel tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-help"
+  short_description: "SuperClaude 帮助"
+  default_prompt: "Use $sc-help to help with sc help tasks."
+policy:
+  allow_implicit_invocation: true

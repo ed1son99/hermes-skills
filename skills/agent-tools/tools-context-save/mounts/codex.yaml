@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-context-save"
+  short_description: "保存当前项目上下文"
+  default_prompt: "Use $tools-context-save to help with tools context save tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: libtv-cli
 description: LibTV 官方 CLI — 命令行操作 LibTV 画布
-category: ai-media
 triggers: [libtv CLI, 画布, 节点, 模型, 素材, liblib CLI]
+platforms: [claude-code, hermes, codex]
 ---
 
 # libtv-cli

@@ -1,0 +1,6 @@
+interface:
+  display_name: "documentation-and-adrs"
+  short_description: "文档与架构决策记录 — 记录决策和文档"
+  default_prompt: "Use $documentation-and-adrs to help with documentation and adrs tasks."
+policy:
+  allow_implicit_invocation: true

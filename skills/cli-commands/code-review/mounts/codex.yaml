@@ -1,0 +1,6 @@
+interface:
+  display_name: "code-review"
+  short_description: "CLI 代码审查 — 审查当前 diff 的正确性 bug 和简化机会"
+  default_prompt: "Use $code-review to help with code review tasks."
+policy:
+  allow_implicit_invocation: true

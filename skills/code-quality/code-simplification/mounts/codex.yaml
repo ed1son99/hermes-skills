@@ -1,0 +1,6 @@
+interface:
+  display_name: "code-simplification"
+  short_description: "代码简化 — 重构使代码更清晰"
+  default_prompt: "Use $code-simplification to help with code simplification tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Hugging Face
+license: MIT
+platforms: [linux, macos, windows]
+tags: [huggingface, hf, models, datasets, hub, mlops]

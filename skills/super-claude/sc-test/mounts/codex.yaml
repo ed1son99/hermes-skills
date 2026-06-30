@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-test"
+  short_description: "测试执行和分析"
+  default_prompt: "Use $sc-test to help with sc test tasks."
+policy:
+  allow_implicit_invocation: true

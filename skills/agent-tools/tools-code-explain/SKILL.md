@@ -1,8 +1,8 @@
 ---
 name: tools-code-explain
 description: 代码解释与分析
-category: agent-tools
 triggers: [explain code, 解释代码, 代码分析, 理解]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-code-explain

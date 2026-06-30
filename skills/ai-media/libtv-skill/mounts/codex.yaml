@@ -1,0 +1,6 @@
+interface:
+  display_name: "libtv-skill"
+  short_description: "LibTV AI 图像视频创作 — 通过 liblib.tv AI 能力生成和编辑图片/视频"
+  default_prompt: "Use $libtv-skill to help with libtv skill tasks."
+policy:
+  allow_implicit_invocation: true

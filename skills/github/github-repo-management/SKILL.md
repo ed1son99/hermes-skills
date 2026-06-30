@@ -1,14 +1,8 @@
 ---
 name: github-repo-management
-description: "Clone/create/fork repos; manage remotes, releases."
-version: 1.1.0
-author: Hermes Agent
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [GitHub, Repositories, Git, Releases, Secrets, Configuration]
-    related_skills: [github-auth, github-pr-workflow, github-issues]
+description: Clone/create/fork repos; manage remotes, releases.
+triggers: [github-repo-management, github, repositories, git, releases, secrets, configuration, clone]
+platforms: [claude-code, hermes, codex]
 ---
 
 # GitHub Repository Management

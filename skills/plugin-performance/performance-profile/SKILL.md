@@ -1,8 +1,8 @@
 ---
 name: performance-profile
 description: 综合性能分析 — 瓶颈识别和优化建议
-category: plugin-performance
 triggers: [profile, 性能分析, 分析, 瓶颈, profiling]
+platforms: [claude-code, hermes, codex]
 ---
 
 # performance-profile

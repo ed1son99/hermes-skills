@@ -1,0 +1,6 @@
+interface:
+  display_name: "yuanbao"
+  short_description: "Yuanbao (元宝) groups: @mention users, query info/members."
+  default_prompt: "Use $yuanbao to help with yuanbao tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "security-review"
+  short_description: "CLI 安全审查 — 完成当前分支待处理变更的安全审查"
+  default_prompt: "Use $security-review to help with security review tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: tools-api-scaffold
 description: API 脚手架生成器
-category: agent-tools
 triggers: [API scaffold, API生成, 接口脚手架]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-api-scaffold

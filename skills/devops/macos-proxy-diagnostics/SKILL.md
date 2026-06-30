@@ -1,14 +1,8 @@
 ---
 name: macos-proxy-diagnostics
-description: "Systematic diagnosis of macOS proxy/VPN/TUN clients: detect when a proxy process is running but not actually proxying traffic."
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-platforms: [macos]
-metadata:
-  hermes:
-    tags: [macos, proxy, vpn, v2ray, network, troubleshooting, diagnostics]
-    related_skills: [systematic-debugging]
+description: Systematic diagnosis of macOS proxy/VPN/TUN clients: detect when a proxy process is running but not actually proxying traffic.
+triggers: [macos-proxy-diagnostics, macos, proxy, vpn, v2ray, network, troubleshooting, diagnostics, systematic, tun]
+platforms: [claude-code, hermes, codex]
 ---
 
 # macOS Proxy Diagnostics

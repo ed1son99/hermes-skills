@@ -1,0 +1,6 @@
+interface:
+  display_name: "interview-me"
+  short_description: "访谈式需求澄清 — 一问一答直到 95% 置信度"
+  default_prompt: "Use $interview-me to help with interview me tasks."
+policy:
+  allow_implicit_invocation: true

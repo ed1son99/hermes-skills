@@ -1,8 +1,8 @@
 ---
 name: tools-cost-optimize
 description: 云成本优化
-category: agent-tools
 triggers: [cost, 成本, 云成本, 优化, cloud]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-cost-optimize

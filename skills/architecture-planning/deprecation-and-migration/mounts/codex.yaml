@@ -1,0 +1,6 @@
+interface:
+  display_name: "deprecation-and-migration"
+  short_description: "弃用与迁移管理 — 安全地移除旧系统和迁移用户"
+  default_prompt: "Use $deprecation-and-migration to help with deprecation and migration tasks."
+policy:
+  allow_implicit_invocation: true

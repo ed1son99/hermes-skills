@@ -1,0 +1,6 @@
+version: "1.1.1"
+author: xdevplatform + openclaw + Hermes Agent
+license: MIT
+platforms: [linux, macos]
+tags: [twitter, x, social-media, xurl, official-api]
+homepage: https://github.com/xdevplatform/xurl

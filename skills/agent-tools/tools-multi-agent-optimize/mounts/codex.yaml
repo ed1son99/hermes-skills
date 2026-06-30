@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-multi-agent-optimize"
+  short_description: "多 Agent 优化应用栈"
+  default_prompt: "Use $tools-multi-agent-optimize to help with tools multi agent optimize tasks."
+policy:
+  allow_implicit_invocation: true

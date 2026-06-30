@@ -1,8 +1,8 @@
 ---
 name: screenplay-master
 description: 剧本创作根编排技能 — 按意图-媒介-阶段-输出-约束进行路由
-category: film-making
 triggers: [剧本, 编剧, 叙事, 商业剧本, 交互式剧本, screenplay, script, 故事]
+platforms: [claude-code, hermes, codex]
 ---
 
 # screenplay-master

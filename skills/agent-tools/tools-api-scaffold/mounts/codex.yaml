@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-api-scaffold"
+  short_description: "API 脚手架生成器"
+  default_prompt: "Use $tools-api-scaffold to help with tools api scaffold tasks."
+policy:
+  allow_implicit_invocation: true

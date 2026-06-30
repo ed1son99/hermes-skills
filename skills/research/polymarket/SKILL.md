@@ -1,10 +1,8 @@
 ---
 name: polymarket
-description: "Query Polymarket: markets, prices, orderbooks, history."
-version: 1.0.0
-author: Hermes Agent + Teknium
-tags: [polymarket, prediction-markets, market-data, trading]
-platforms: [linux, macos, windows]
+description: Query Polymarket: markets, prices, orderbooks, history.
+triggers: [polymarket, prediction-markets, market-data, trading, query polymarket]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Polymarket — Prediction Market Data

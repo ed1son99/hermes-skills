@@ -1,8 +1,8 @@
 ---
 name: sc-estimate
 description: 开发估算
-category: super-claude
 triggers: [sc:estimate, 估算, 工作量, 评估]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-estimate

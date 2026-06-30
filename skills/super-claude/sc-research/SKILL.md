@@ -1,8 +1,8 @@
 ---
 name: sc-research
 description: 深度网络调研
-category: super-claude
 triggers: [sc:research, 调研, 网络搜索, 深度研究]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-research

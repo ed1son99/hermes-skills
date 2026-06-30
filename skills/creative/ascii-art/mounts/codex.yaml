@@ -1,0 +1,6 @@
+interface:
+  display_name: "ascii-art"
+  short_description: "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii."
+  default_prompt: "Use $ascii-art to help with ascii art tasks."
+policy:
+  allow_implicit_invocation: true

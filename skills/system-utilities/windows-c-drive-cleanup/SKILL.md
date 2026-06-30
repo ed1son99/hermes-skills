@@ -1,6 +1,8 @@
 ---
 name: windows-c-drive-cleanup
 description: Windows C 盘清理前的安全只读盘点、目录分类、删除风险等级判断和清理建议表生成。Use when the user asks to clean Windows C drive, free disk space, understand what is taking space, classify C drive files, decide what can or cannot be deleted, or produce a safe cleanup checklist/table for Windows.
+triggers: [windows-c-drive-cleanup, 盘清理前, 的安全只, 读盘点, 目录分类, 删除风险, 等级判断, windows, use]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Windows C 盘清理分级

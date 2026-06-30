@@ -1,12 +1,8 @@
 ---
 name: hermes-troubleshooting
-description: "Diagnose and fix a frozen, unresponsive, or slow Hermes Agent — process death, config rot, auxiliary timeout, profile mismatch, model issues."
-version: 1.0.0
-author: Hermes Agent
-platforms: [macos, linux]
-metadata:
-  hermes:
-    tags: [hermes, troubleshooting, diagnostics, config, profile]
+description: Diagnose and fix a frozen, unresponsive, or slow Hermes Agent — process death, config rot, auxiliary timeout, profile mismatch, model issues.
+triggers: [hermes-troubleshooting, hermes, troubleshooting, diagnostics, config, profile, diagnose, hermes agent]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Hermes Troubleshooting

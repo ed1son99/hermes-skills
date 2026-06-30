@@ -1,0 +1,6 @@
+interface:
+  display_name: "github-issues"
+  short_description: "Create, triage, label, assign GitHub issues via gh or REST."
+  default_prompt: "Use $github-issues to help with github issues tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ci-cd-and-automation"
+  short_description: "CI/CD 与自动化 — 构建和部署流水线配置"
+  default_prompt: "Use $ci-cd-and-automation to help with ci cd and automation tasks."
+policy:
+  allow_implicit_invocation: true

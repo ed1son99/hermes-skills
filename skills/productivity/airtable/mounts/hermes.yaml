@@ -1,0 +1,6 @@
+version: "1.1.0"
+author: community
+license: MIT
+platforms: [linux, macos, windows]
+tags: [Airtable, Productivity, Database, API]
+homepage: https://airtable.com/developers/web/api/introduction

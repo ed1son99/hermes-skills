@@ -1,0 +1,6 @@
+interface:
+  display_name: "idea-refine"
+  short_description: "想法精炼 — 通过结构化发散和收敛思维将原始想法打磨为可执行概念"
+  default_prompt: "Use $idea-refine to help with idea refine tasks."
+policy:
+  allow_implicit_invocation: true

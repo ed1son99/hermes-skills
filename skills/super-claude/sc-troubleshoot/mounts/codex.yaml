@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-troubleshoot"
+  short_description: "诊断和解决问题"
+  default_prompt: "Use $sc-troubleshoot to help with sc troubleshoot tasks."
+policy:
+  allow_implicit_invocation: true

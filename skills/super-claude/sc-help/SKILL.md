@@ -1,8 +1,8 @@
 ---
 name: sc-help
 description: SuperClaude 帮助
-category: super-claude
 triggers: [sc:help, 帮助, 命令列表]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-help

@@ -1,0 +1,6 @@
+interface:
+  display_name: "apple-reminders"
+  short_description: "Apple Reminders via remindctl: add, list, complete."
+  default_prompt: "Use $apple-reminders to help with apple reminders tasks."
+policy:
+  allow_implicit_invocation: true

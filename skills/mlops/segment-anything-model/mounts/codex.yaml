@@ -1,0 +1,6 @@
+interface:
+  display_name: "segment-anything-model"
+  short_description: "SAM: zero-shot image segmentation via points, boxes, masks."
+  default_prompt: "Use $segment-anything-model to help with segment anything model tasks."
+policy:
+  allow_implicit_invocation: true

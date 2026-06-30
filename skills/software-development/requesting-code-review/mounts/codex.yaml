@@ -1,0 +1,6 @@
+interface:
+  display_name: "requesting-code-review"
+  short_description: "Pre-commit review: security scan, quality gates, auto-fix."
+  default_prompt: "Use $requesting-code-review to help with requesting code review tasks."
+policy:
+  allow_implicit_invocation: true

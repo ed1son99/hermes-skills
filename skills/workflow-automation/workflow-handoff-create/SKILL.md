@@ -1,8 +1,8 @@
 ---
 name: workflow-handoff-create
 description: 创建任务交接文档
-category: workflow-automation
 triggers: [/handoff-create, handoff, 交接, 续接]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-handoff-create

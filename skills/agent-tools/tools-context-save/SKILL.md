@@ -1,8 +1,8 @@
 ---
 name: tools-context-save
 description: 保存当前项目上下文
-category: agent-tools
 triggers: [context save, 保存上下文, 项目上下文]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-context-save

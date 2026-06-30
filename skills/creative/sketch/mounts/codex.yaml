@@ -1,0 +1,6 @@
+interface:
+  display_name: "sketch"
+  short_description: "Throwaway HTML mockups: 2-3 design variants to compare."
+  default_prompt: "Use $sketch to help with sketch tasks."
+policy:
+  allow_implicit_invocation: true

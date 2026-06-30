@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-business-panel"
+  short_description: "商业面板分析系统"
+  default_prompt: "Use $sc-business-panel to help with sc business panel tasks."
+policy:
+  allow_implicit_invocation: true

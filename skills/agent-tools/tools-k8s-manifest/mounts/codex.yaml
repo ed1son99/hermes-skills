@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-k8s-manifest"
+  short_description: "Kubernetes Manifest 生成"
+  default_prompt: "Use $tools-k8s-manifest to help with tools k8s manifest tasks."
+policy:
+  allow_implicit_invocation: true

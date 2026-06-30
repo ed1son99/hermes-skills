@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Orchestra Research
+license: MIT
+platforms: [linux, macos]
+tags: [vLLM, Inference Serving, PagedAttention, Continuous Batching, High Throughput, Production, OpenAI API, Quantization, Tensor Parallelism]

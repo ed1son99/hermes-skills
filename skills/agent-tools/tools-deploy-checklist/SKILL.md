@@ -1,8 +1,8 @@
 ---
 name: tools-deploy-checklist
 description: 部署检查清单和配置
-category: agent-tools
 triggers: [deploy checklist, 部署检查, 上线清单]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-deploy-checklist

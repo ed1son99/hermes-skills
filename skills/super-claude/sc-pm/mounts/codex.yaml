@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-pm"
+  short_description: "项目管理 Agent"
+  default_prompt: "Use $sc-pm to help with sc pm tasks."
+policy:
+  allow_implicit_invocation: true

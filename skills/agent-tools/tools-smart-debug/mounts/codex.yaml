@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-smart-debug"
+  short_description: "智能调试 — 使用专门的调试 agents"
+  default_prompt: "Use $tools-smart-debug to help with tools smart debug tasks."
+policy:
+  allow_implicit_invocation: true

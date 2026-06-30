@@ -1,0 +1,6 @@
+interface:
+  display_name: "claude-api"
+  short_description: "Claude API 参考 — 模型 ID、定价、参数、流式、工具使用、MCP"
+  default_prompt: "Use $claude-api to help with claude api tasks."
+policy:
+  allow_implicit_invocation: true

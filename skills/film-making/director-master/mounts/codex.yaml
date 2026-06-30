@@ -1,0 +1,6 @@
+interface:
+  display_name: "director-master"
+  short_description: "山音超级导演大师 — 从剧本到九列分镜表的完整导演工作流"
+  default_prompt: "Use $director-master to help with director master tasks."
+policy:
+  allow_implicit_invocation: true

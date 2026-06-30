@@ -1,0 +1,6 @@
+interface:
+  display_name: "code-review-and-quality"
+  short_description: "多维度代码审查 — correctness, readability, architecture, security, performance"
+  default_prompt: "Use $code-review-and-quality to help with code review and quality tasks."
+policy:
+  allow_implicit_invocation: true

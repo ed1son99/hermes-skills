@@ -1,0 +1,6 @@
+interface:
+  display_name: "incremental-implementation"
+  short_description: "增量实现 — 逐步交付变更"
+  default_prompt: "Use $incremental-implementation to help with incremental implementation tasks."
+policy:
+  allow_implicit_invocation: true

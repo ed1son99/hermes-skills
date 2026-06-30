@@ -1,0 +1,6 @@
+interface:
+  display_name: "verify"
+  short_description: "CLI 验证 — 通过运行应用确认代码变更是否有效"
+  default_prompt: "Use $verify to help with verify tasks."
+policy:
+  allow_implicit_invocation: true

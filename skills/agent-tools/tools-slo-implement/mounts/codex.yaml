@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-slo-implement"
+  short_description: "SLO 实现指南"
+  default_prompt: "Use $tools-slo-implement to help with tools slo implement tasks."
+policy:
+  allow_implicit_invocation: true

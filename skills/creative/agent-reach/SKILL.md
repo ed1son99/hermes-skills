@@ -1,8 +1,8 @@
 ---
 name: agent-reach
 description: 全网调研 — 13 平台多后端路由搜索
-category: creative
 triggers: [调研, research, 搜索, 查, 找, look up, 小红书, xiaohongshu, Twitter, 推特, B站, bilibili, Reddit, V2EX, LinkedIn, YouTube, GitHub, 播客, RSS]
+platforms: [claude-code, hermes, codex]
 ---
 
 # agent-reach

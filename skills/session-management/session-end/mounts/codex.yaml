@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-end"
+  short_description: "结束当前开发会话"
+  default_prompt: "Use $session-end to help with session end tasks."
+policy:
+  allow_implicit_invocation: true

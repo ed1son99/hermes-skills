@@ -1,8 +1,8 @@
 ---
 name: tools-debug-trace
 description: 调试和追踪配置
-category: agent-tools
 triggers: [debug trace, 调试追踪, 日志, tracing]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-debug-trace

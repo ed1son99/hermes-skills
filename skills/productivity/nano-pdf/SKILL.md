@@ -1,14 +1,8 @@
 ---
 name: nano-pdf
-description: "Edit PDF text/typos/titles via nano-pdf CLI (NL prompts)."
-version: 1.0.0
-author: community
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [PDF, Documents, Editing, NLP, Productivity]
-    homepage: https://pypi.org/project/nano-pdf/
+description: Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).
+triggers: [nano-pdf, pdf, documents, editing, nlp, productivity, edit pdf, cli, nl]
+platforms: [claude-code, hermes, codex]
 ---
 
 # nano-pdf

@@ -1,0 +1,6 @@
+interface:
+  display_name: "kanban-worker"
+  short_description: "Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected into every worker's system prompt as KANBAN_GUIDANCE (from agent/prompt_builder.py); this skill is what you load when you want deeper detail on specific scenarios."
+  default_prompt: "Use $kanban-worker to help with kanban worker tasks."
+policy:
+  allow_implicit_invocation: true

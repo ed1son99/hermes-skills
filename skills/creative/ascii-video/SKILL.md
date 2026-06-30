@@ -1,7 +1,8 @@
 ---
 name: ascii-video
-description: "ASCII video: convert video/audio to colored ASCII MP4/GIF."
-platforms: [linux, macos, windows]
+description: ASCII video: convert video/audio to colored ASCII MP4/GIF.
+triggers: [ascii-video, ascii, ascii mp4, gif]
+platforms: [claude-code, hermes, codex]
 ---
 
 # ASCII Video Production Pipeline

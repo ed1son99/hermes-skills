@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-workflow"
+  short_description: "从 PRD 生成结构化实施工作流"
+  default_prompt: "Use $sc-workflow to help with sc workflow tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: sc-brainstorm
 description: 交互式需求发现 — 苏格拉底式对话和系统探索
-category: super-claude
 triggers: [sc:brainstorm, 头脑风暴, 需求, 苏格拉底]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-brainstorm

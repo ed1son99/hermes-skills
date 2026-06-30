@@ -1,0 +1,6 @@
+interface:
+  display_name: "hermes-agent-skill-authoring"
+  short_description: "Author in-repo SKILL.md: frontmatter, validator, structure, and writing-quality principles."
+  default_prompt: "Use $hermes-agent-skill-authoring to help with hermes agent skill authoring tasks."
+policy:
+  allow_implicit_invocation: true

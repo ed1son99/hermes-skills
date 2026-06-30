@@ -1,8 +1,8 @@
 ---
 name: sc-improve
 description: 系统化改进
-category: super-claude
 triggers: [sc:improve, 改进, 优化]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-improve

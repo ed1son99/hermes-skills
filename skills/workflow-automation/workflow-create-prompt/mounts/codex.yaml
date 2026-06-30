@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-create-prompt"
+  short_description: "创建优化的 XML 结构化 Prompt"
+  default_prompt: "Use $workflow-create-prompt to help with workflow create prompt tasks."
+policy:
+  allow_implicit_invocation: true

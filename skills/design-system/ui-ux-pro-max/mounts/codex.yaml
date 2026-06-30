@@ -1,0 +1,6 @@
+interface:
+  display_name: "ui-ux-pro-max"
+  short_description: "UI/UX 专业级设计系统 — 前端界面工程化"
+  default_prompt: "Use $ui-ux-pro-max to help with ui ux pro max tasks."
+policy:
+  allow_implicit_invocation: true

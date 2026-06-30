@@ -1,0 +1,6 @@
+interface:
+  display_name: "keybindings-help"
+  short_description: "键盘快捷键自定义 — ~/.claude/keybindings.json 配置"
+  default_prompt: "Use $keybindings-help to help with keybindings help tasks."
+policy:
+  allow_implicit_invocation: true

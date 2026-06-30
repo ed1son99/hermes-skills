@@ -1,8 +1,8 @@
 ---
 name: sc-pm
 description: 项目管理 Agent
-category: super-claude
 triggers: [sc:pm, 项目管理, 协调]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-pm

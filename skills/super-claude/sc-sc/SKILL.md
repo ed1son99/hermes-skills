@@ -1,8 +1,8 @@
 ---
 name: sc-sc
 description: SuperClaude 命令调度器
-category: super-claude
 triggers: [sc:sc, 调度, 命令]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-sc

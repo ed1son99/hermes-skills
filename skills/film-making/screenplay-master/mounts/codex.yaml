@@ -1,0 +1,6 @@
+interface:
+  display_name: "screenplay-master"
+  short_description: "剧本创作根编排技能 — 按意图-媒介-阶段-输出-约束进行路由"
+  default_prompt: "Use $screenplay-master to help with screenplay master tasks."
+policy:
+  allow_implicit_invocation: true

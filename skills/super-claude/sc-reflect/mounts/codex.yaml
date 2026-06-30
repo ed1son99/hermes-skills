@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-reflect"
+  short_description: "任务反思和验证"
+  default_prompt: "Use $sc-reflect to help with sc reflect tasks."
+policy:
+  allow_implicit_invocation: true

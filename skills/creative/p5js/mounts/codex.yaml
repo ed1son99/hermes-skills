@@ -1,0 +1,6 @@
+interface:
+  display_name: "p5js"
+  short_description: "p5.js sketches: gen art, shaders, interactive, 3D."
+  default_prompt: "Use $p5js to help with p5js tasks."
+policy:
+  allow_implicit_invocation: true

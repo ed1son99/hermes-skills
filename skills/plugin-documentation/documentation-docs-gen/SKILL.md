@@ -1,8 +1,8 @@
 ---
 name: documentation-docs-gen
 description: 自动文档生成 — API 文档、用户指南、交互式文档
-category: plugin-documentation
 triggers: [docs, 文档生成, API docs, 用户指南, documentation]
+platforms: [claude-code, hermes, codex]
 ---
 
 # documentation-docs-gen

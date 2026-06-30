@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-code-migrate"
+  short_description: "代码迁移助手"
+  default_prompt: "Use $tools-code-migrate to help with tools code migrate tasks."
+policy:
+  allow_implicit_invocation: true

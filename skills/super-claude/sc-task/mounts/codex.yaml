@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-task"
+  short_description: "复杂任务执行"
+  default_prompt: "Use $sc-task to help with sc task tasks."
+policy:
+  allow_implicit_invocation: true

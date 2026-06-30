@@ -1,8 +1,8 @@
 ---
 name: tools-langchain-agent
 description: LangChain/LangGraph Agent 脚手架
-category: agent-tools
 triggers: [langchain, langgraph, agent, LLM agent, RAG]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-langchain-agent

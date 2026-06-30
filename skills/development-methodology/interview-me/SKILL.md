@@ -1,8 +1,8 @@
 ---
 name: interview-me
 description: 访谈式需求澄清 — 一问一答直到 95% 置信度
-category: development-methodology
 triggers: [interview, 访谈, 需求澄清, 理解意图, 提问, clarify]
+platforms: [claude-code, hermes, codex]
 ---
 
 # interview-me

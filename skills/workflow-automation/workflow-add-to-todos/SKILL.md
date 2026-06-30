@@ -1,8 +1,8 @@
 ---
 name: workflow-add-to-todos
 description: 添加 TODO 到 TO-DOS.md
-category: workflow-automation
 triggers: [/add-to-todos, todo, 待办, 任务]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-add-to-todos

@@ -1,0 +1,6 @@
+interface:
+  display_name: "planning-and-task-breakdown"
+  short_description: "工作拆解与任务规划 — 将工作分解为有序任务"
+  default_prompt: "Use $planning-and-task-breakdown to help with planning and task breakdown tasks."
+policy:
+  allow_implicit_invocation: true

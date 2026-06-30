@@ -1,0 +1,6 @@
+interface:
+  display_name: "fewer-permission-prompts"
+  short_description: "减少权限提示 — 扫描转录记录并添加 allowlist"
+  default_prompt: "Use $fewer-permission-prompts to help with fewer permission prompts tasks."
+policy:
+  allow_implicit_invocation: true

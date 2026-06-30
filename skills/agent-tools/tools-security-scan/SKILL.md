@@ -1,8 +1,8 @@
 ---
 name: tools-security-scan
 description: 安全扫描和漏洞评估
-category: agent-tools
 triggers: [security scan, 安全扫描, 漏洞评估]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-security-scan

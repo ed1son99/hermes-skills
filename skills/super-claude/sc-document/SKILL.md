@@ -1,8 +1,8 @@
 ---
 name: sc-document
 description: 聚焦文档生成
-category: super-claude
 triggers: [sc:document, 文档, 注释]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-document

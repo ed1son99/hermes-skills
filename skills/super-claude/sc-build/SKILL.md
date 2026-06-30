@@ -1,8 +1,8 @@
 ---
 name: sc-build
 description: 构建、编译和打包项目
-category: super-claude
 triggers: [sc:build, 构建, 编译, 打包, build]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-build

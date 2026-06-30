@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-list"
+  short_description: "列出所有开发会话"
+  default_prompt: "Use $session-list to help with session list tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: performance-benchmark
 description: 负载测试与性能基准 — 智能场景生成
-category: plugin-performance
 triggers: [benchmark, 负载测试, load test, 性能基准, 压测]
+platforms: [claude-code, hermes, codex]
 ---
 
 # performance-benchmark

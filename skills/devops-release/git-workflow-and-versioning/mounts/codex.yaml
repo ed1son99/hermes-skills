@@ -1,0 +1,6 @@
+interface:
+  display_name: "git-workflow-and-versioning"
+  short_description: "Git 工作流与版本管理 — 结构化 Git 实践"
+  default_prompt: "Use $git-workflow-and-versioning to help with git workflow and versioning tasks."
+policy:
+  allow_implicit_invocation: true

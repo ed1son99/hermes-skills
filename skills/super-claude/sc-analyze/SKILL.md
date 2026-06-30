@@ -1,8 +1,8 @@
 ---
 name: sc-analyze
 description: 综合代码分析 — 质量、安全、性能、架构
-category: super-claude
 triggers: [sc:analyze, 分析, 代码分析]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-analyze

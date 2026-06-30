@@ -1,8 +1,8 @@
 ---
 name: session-update
 description: 更新当前开发会话
-category: session-management
 triggers: [/session-update, session, 更新会话]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-update

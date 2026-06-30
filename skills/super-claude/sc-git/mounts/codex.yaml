@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-git"
+  short_description: "Git 操作"
+  default_prompt: "Use $sc-git to help with sc git tasks."
+policy:
+  allow_implicit_invocation: true

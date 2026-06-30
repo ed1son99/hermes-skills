@@ -1,8 +1,8 @@
 ---
 name: source-driven-development
 description: 源码驱动开发 — 基于官方文档做决策
-category: development-methodology
 triggers: [source, 官方文档, 源码, RTFM, documentation-driven, 文档驱动]
+platforms: [claude-code, hermes, codex]
 ---
 
 # source-driven-development

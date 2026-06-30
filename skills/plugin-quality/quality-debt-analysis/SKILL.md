@@ -1,8 +1,8 @@
 ---
 name: quality-debt-analysis
 description: 技术债识别 — 优先级排序、工作量估算、重构路线图
-category: plugin-quality
 triggers: [technical debt, 技术债, 重构, 优化, debt analysis]
+platforms: [claude-code, hermes, codex]
 ---
 
 # quality-debt-analysis

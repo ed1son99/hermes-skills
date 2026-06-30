@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-data-pipeline"
+  short_description: "数据流水线架构"
+  default_prompt: "Use $tools-data-pipeline to help with tools data pipeline tasks."
+policy:
+  allow_implicit_invocation: true

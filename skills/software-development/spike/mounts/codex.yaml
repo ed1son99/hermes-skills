@@ -1,0 +1,6 @@
+interface:
+  display_name: "spike"
+  short_description: "Throwaway experiments to validate an idea before build."
+  default_prompt: "Use $spike to help with spike tasks."
+policy:
+  allow_implicit_invocation: true

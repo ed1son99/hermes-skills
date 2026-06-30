@@ -1,8 +1,8 @@
 ---
 name: api-and-interface-design
 description: API 与接口设计 — 稳定的 API 和模块边界设计
-category: architecture-planning
 triggers: [API, interface, 接口, REST, GraphQL, 模块边界, contract, 类型契约]
+platforms: [claude-code, hermes, codex]
 ---
 
 # api-and-interface-design

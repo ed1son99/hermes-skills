@@ -1,8 +1,8 @@
 ---
 name: tools-multi-agent-optimize
 description: 多 Agent 优化应用栈
-category: agent-tools
 triggers: [multi-agent, 多agent, 优化, 应用栈]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-multi-agent-optimize

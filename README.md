@@ -1,6 +1,38 @@
 # Skills Catalog
 
-完整 Claude Code / Cursor / Codex 等多平台 Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。
+通用跨平台 Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。  
+兼容 **Claude Code** / **Hermes** / **Codex (OpenAI)** / **Cursor** 等多平台。
+
+## 通用架构
+
+每个 Skill 采用统一跨平台格式，一次维护，多 Agent 通用：
+
+```
+skills/<category>/<name>/
+├── SKILL.md                  # 通用核心（所有平台共享）
+├── mounts/                   # 各平台挂载配置
+│   ├── claude-code.yaml      # Claude Code: category
+│   ├── hermes.yaml           # Hermes: version, author, license, tags, ...
+│   └── codex.yaml            # Codex: interface, policy
+├── scripts/                  # 辅助脚本 (Python/Bash/PS1)
+├── references/               # API 文档、备忘单
+└── templates/                # 模板文件
+```
+
+### SKILL.md 统一格式
+
+```yaml
+---
+name: <skill-name>
+description: <universal description>
+triggers: [keyword1, keyword2, ...]       # 通用触发词
+platforms: [claude-code, hermes, codex]   # 可用平台
+---
+
+# <skill-name>
+
+<通用 Markdown 工作流指令 — 所有平台共享>
+```
 
 ## 分类总览
 
@@ -46,30 +78,22 @@
 | **yuanbao** | 1 | 元宝集成 |
 | **system-utilities** | 1 | 系统工具：Windows C 盘安全清理 |
 
-## 目录结构
-
-```
-skills/
-├── <category>/
-│   ├── DESCRIPTION.md          # 分类说明和 skill 列表
-│   └── <skill-name>/
-│       ├── SKILL.md            # YAML frontmatter + Markdown 工作流指令
-│       ├── references/         # API 文档、备忘单
-│       ├── scripts/            # 辅助脚本 (Python/Bash)
-│       └── templates/          # 模板文件
-```
-
 ## 统计
 
 - **总 Skill 数**: 222
 - **总分类数**: 39
-- **完整 SKILL.md 覆盖**: 100%
+- **平台兼容**: Claude Code / Hermes / Codex / Cursor
+- **每个 Skill**: 1 通用核心 + 3 平台挂载配置
 
 ## 使用方式
 
-这些 Skills 由 Claude Code Agent 在运行时加载。每个 SKILL.md 包含：
-- **YAML frontmatter**: name, description, category, triggers
-- **Markdown body**: 概述、使用场景、注意事项
+SKILL.md 是通用核心，所有平台都能读取。平台特定配置在 `mounts/` 目录下：
+
+| 平台 | 加载文件 | 关键字段 |
+|------|---------|---------|
+| **Claude Code** | `SKILL.md` + `mounts/claude-code.yaml` | `triggers`, `category` |
+| **Hermes Agent** | `SKILL.md` + `mounts/hermes.yaml` | `version`, `tags`, `platforms` |
+| **Codex** | `SKILL.md` + `mounts/codex.yaml` | `interface.display_name`, `policy.allow_implicit_invocation` |
 
 ## License
 

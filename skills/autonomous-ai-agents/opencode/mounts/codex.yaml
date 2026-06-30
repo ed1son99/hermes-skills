@@ -1,0 +1,6 @@
+interface:
+  display_name: "opencode"
+  short_description: "Delegate coding to OpenCode CLI (features, PR review)."
+  default_prompt: "Use $opencode to help with opencode tasks."
+policy:
+  allow_implicit_invocation: true

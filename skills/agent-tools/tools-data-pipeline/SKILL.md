@@ -1,8 +1,8 @@
 ---
 name: tools-data-pipeline
 description: 数据流水线架构
-category: agent-tools
 triggers: [data pipeline, 数据流水线, ETL, 数据架构]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-data-pipeline

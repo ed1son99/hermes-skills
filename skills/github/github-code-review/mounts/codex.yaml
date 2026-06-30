@@ -1,0 +1,6 @@
+interface:
+  display_name: "github-code-review"
+  short_description: "Review PRs: diffs, inline comments via gh or REST."
+  default_prompt: "Use $github-code-review to help with github code review tasks."
+policy:
+  allow_implicit_invocation: true

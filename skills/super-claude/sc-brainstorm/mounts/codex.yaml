@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-brainstorm"
+  short_description: "交互式需求发现 — 苏格拉底式对话和系统探索"
+  default_prompt: "Use $sc-brainstorm to help with sc brainstorm tasks."
+policy:
+  allow_implicit_invocation: true

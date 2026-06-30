@@ -1,8 +1,8 @@
 ---
 name: workflow-whats-next
 description: 分析当前对话并创建后续步骤文档
-category: workflow-automation
 triggers: [/whats-next, next, 下一步, 后续]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-whats-next

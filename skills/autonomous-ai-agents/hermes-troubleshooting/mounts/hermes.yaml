@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Hermes Agent
+license: MIT
+platforms: [macos, linux]
+tags: [hermes, troubleshooting, diagnostics, config, profile]

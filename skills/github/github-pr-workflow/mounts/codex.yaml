@@ -1,0 +1,6 @@
+interface:
+  display_name: "github-pr-workflow"
+  short_description: "GitHub PR lifecycle: branch, commit, open, CI, merge."
+  default_prompt: "Use $github-pr-workflow to help with github pr workflow tasks."
+policy:
+  allow_implicit_invocation: true

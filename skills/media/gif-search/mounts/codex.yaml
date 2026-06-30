@@ -1,0 +1,6 @@
+interface:
+  display_name: "gif-search"
+  short_description: "Search/download GIFs from Tenor via curl + jq."
+  default_prompt: "Use $gif-search to help with gif search tasks."
+policy:
+  allow_implicit_invocation: true

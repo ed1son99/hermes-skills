@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-add-to-todos"
+  short_description: "添加 TODO 到 TO-DOS.md"
+  default_prompt: "Use $workflow-add-to-todos to help with workflow add to todos tasks."
+policy:
+  allow_implicit_invocation: true

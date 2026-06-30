@@ -1,0 +1,6 @@
+interface:
+  display_name: "touchdesigner-mcp"
+  short_description: "Control a running TouchDesigner instance via twozero MCP — create operators, set parameters, wire connections, execute Python, build real-time visuals. 36 native tools."
+  default_prompt: "Use $touchdesigner-mcp to help with touchdesigner mcp tasks."
+policy:
+  allow_implicit_invocation: true

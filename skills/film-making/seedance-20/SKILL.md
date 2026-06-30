@@ -1,8 +1,8 @@
 ---
 name: seedance-20
 description: Seedance 2.0 视频生成 — T2V, I2V, V2V, R2V, audio, safety, API
-category: film-making
 triggers: [Seedance, T2V, I2V, V2V, R2V, 视频生成, AI视频, text-to-video]
+platforms: [claude-code, hermes, codex]
 ---
 
 # seedance-20

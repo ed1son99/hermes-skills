@@ -1,0 +1,6 @@
+interface:
+  display_name: "obsidian-codex-bridge"
+  short_description: "连接 Obsidian vault 中 Codex Archive 快照与 Hermes 技能体系的桥接 Skill。告诉我 vault 里有哪些可参考的 Codex 技能，并能按需选择性迁移。"
+  default_prompt: "Use $obsidian-codex-bridge to help with obsidian codex bridge tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: spec-driven-development
 description: 规格驱动开发 — 先写规格再编码
-category: development-methodology
 triggers: [spec, specification, 规格, 需求, PRD, 规范, 设计文档]
+platforms: [claude-code, hermes, codex]
 ---
 
 # spec-driven-development

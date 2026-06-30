@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-docker-optimize"
+  short_description: "Docker 优化"
+  default_prompt: "Use $tools-docker-optimize to help with tools docker optimize tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 ---
 name: workflow-check-todos
 description: 查看并选择待办 TODO
-category: workflow-automation
 triggers: [/check-todos, todo, 待办列表, 查看任务]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-check-todos

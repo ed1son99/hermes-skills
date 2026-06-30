@@ -1,0 +1,6 @@
+interface:
+  display_name: "systematic-debugging"
+  short_description: "4-phase root cause debugging: understand bugs before fixing."
+  default_prompt: "Use $systematic-debugging to help with systematic debugging tasks."
+policy:
+  allow_implicit_invocation: true

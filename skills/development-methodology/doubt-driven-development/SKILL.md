@@ -1,8 +1,8 @@
 ---
 name: doubt-driven-development
 description: 质疑驱动开发 — 每个非平凡决策经受对抗性审查
-category: development-methodology
 triggers: [doubt, 质疑, 审查, 验证, adversarial, 代码审查, correctness]
+platforms: [claude-code, hermes, codex]
 ---
 
 # doubt-driven-development

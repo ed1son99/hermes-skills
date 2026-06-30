@@ -1,0 +1,6 @@
+interface:
+  display_name: "deep-research"
+  short_description: "深度研究 — 扇形网络搜索、获取来源、对抗性验证、综合引用报告"
+  default_prompt: "Use $deep-research to help with deep research tasks."
+policy:
+  allow_implicit_invocation: true

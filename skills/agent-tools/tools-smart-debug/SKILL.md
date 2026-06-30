@@ -1,8 +1,8 @@
 ---
 name: tools-smart-debug
 description: 智能调试 — 使用专门的调试 agents
-category: agent-tools
 triggers: [smart debug, 智能调试, 复杂bug]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-smart-debug

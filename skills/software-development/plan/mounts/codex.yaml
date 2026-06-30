@@ -1,0 +1,6 @@
+interface:
+  display_name: "plan"
+  short_description: "Plan mode: write an actionable markdown plan to .hermes/plans/, no execution. Bite-sized tasks, exact paths, complete code."
+  default_prompt: "Use $plan to help with plan tasks."
+policy:
+  allow_implicit_invocation: true

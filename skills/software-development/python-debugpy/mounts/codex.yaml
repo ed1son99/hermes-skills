@@ -1,0 +1,6 @@
+interface:
+  display_name: "python-debugpy"
+  short_description: "Debug Python: pdb REPL + debugpy remote (DAP)."
+  default_prompt: "Use $python-debugpy to help with python debugpy tasks."
+policy:
+  allow_implicit_invocation: true

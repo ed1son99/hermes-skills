@@ -1,8 +1,8 @@
 ---
 name: tools-db-migrate
 description: 数据库迁移策略与实现
-category: agent-tools
 triggers: [DB migration, 数据库迁移, schema, 迁移策略]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-db-migrate

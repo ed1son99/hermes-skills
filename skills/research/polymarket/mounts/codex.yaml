@@ -1,0 +1,6 @@
+interface:
+  display_name: "polymarket"
+  short_description: "Query Polymarket: markets, prices, orderbooks, history."
+  default_prompt: "Use $polymarket to help with polymarket tasks."
+policy:
+  allow_implicit_invocation: true

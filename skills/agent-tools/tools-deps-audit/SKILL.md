@@ -1,8 +1,8 @@
 ---
 name: tools-deps-audit
 description: 依赖审计和安全分析
-category: agent-tools
 triggers: [deps audit, 依赖审计, 依赖安全, npm audit]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-deps-audit

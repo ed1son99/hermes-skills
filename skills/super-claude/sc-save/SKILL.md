@@ -1,8 +1,8 @@
 ---
 name: sc-save
 description: 会话上下文持久化
-category: super-claude
 triggers: [sc:save, 保存, 持久化, 上下文]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-save

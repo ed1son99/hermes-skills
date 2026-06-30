@@ -1,0 +1,6 @@
+interface:
+  display_name: "camera-director"
+  short_description: "生成专业视频运镜提示词，支持单镜头和分镜脚本"
+  default_prompt: "Use $camera-director to help with camera director tasks."
+policy:
+  allow_implicit_invocation: true

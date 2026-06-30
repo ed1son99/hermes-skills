@@ -1,8 +1,8 @@
 ---
 name: workflow-prompt-run
 description: 并行或顺序执行多个 Prompt
-category: workflow-automation
 triggers: [/prompt-run, prompt, 执行, 批量]
+platforms: [claude-code, hermes, codex]
 ---
 
 # workflow-prompt-run

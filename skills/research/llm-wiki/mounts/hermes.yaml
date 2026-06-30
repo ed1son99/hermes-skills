@@ -1,0 +1,5 @@
+version: "2.1.0"
+author: Hermes Agent
+license: MIT
+platforms: [linux, macos, windows]
+tags: [wiki, knowledge-base, research, notes, markdown, rag-alternative]

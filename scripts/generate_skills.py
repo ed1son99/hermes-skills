@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Generate SKILL.md files from a comprehensive skill catalog.
+"""Generate SKILL.md files and mount configs in universal cross-platform format.
+
+Produces the unified structure compatible with Claude Code / Hermes / Codex / Cursor:
+  skills/<category>/<name>/
+  ├── SKILL.md                  # Universal: name, description, triggers, platforms
+  ├── mounts/
+  │   ├── claude-code.yaml
+  │   ├── hermes.yaml
+  │   └── codex.yaml
+  ├── references/
+  ├── scripts/
+  └── templates/
 
 Run from repo root: python scripts/generate_skills.py
 """
@@ -936,13 +947,14 @@ CATALOG = {
 }
 
 
-def generate_skill_md(category: str, name: str, description: str, trigger: str, details: str) -> str:
-    """Generate a SKILL.md file for a single skill."""
+def generate_skill_md(name: str, description: str, trigger_str: str, details: str) -> str:
+    """Generate universal SKILL.md for a single skill."""
+    triggers = [t.strip() for t in trigger_str.split(',') if t.strip()]
     return f"""---
 name: {name}
 description: {description}
-category: {category}
-triggers: [{trigger}]
+triggers: {triggers}
+platforms: [claude-code, hermes, codex]
 ---
 
 # {name}
@@ -955,29 +967,45 @@ triggers: [{trigger}]
 
 ## 使用场景
 
-触发关键词: {trigger}
+触发关键词: {trigger_str}
 
-## 分类
+## 平台兼容
 
-所属分类: `{category}`
-
-## 注意事项
-
-本 Skill 由 Claude Code 自动加载。使用 Skill 工具调用。
+本 Skill 兼容 Claude Code / Hermes / Codex / Cursor 等多平台。
+各平台特定配置见 `mounts/` 目录。
 """
 
 
-def generate_description_md(category: str, skills: list) -> str:
-    """Generate a DESCRIPTION.md for a category."""
-    lines = [
-        f"# {category}",
-        "",
-        f"Skills in the {category} category:",
-        "",
-    ]
-    for name, desc, trigger, _details in skills:
-        lines.append(f"- **{name}** — {desc}")
-    return "\n".join(lines) + "\n"
+def generate_mounts(category: str, name: str, description: str, trigger_str: str) -> dict:
+    """Generate all three mount files for a skill."""
+    claude_code = f"""category: {category}
+"""
+
+    hermes = f"""version: "1.0.0"
+author: Skills Catalog
+license: MIT
+platforms: [linux, macos, windows]
+tags: [{trigger_str}]
+"""
+
+    codex = f"""interface:
+  display_name: "{name.replace('-', ' ').title()}"
+  short_description: "{description}"
+  default_prompt: "Use ${name} to help with {name.replace('-', ' ')} tasks."
+policy:
+  allow_implicit_invocation: true
+"""
+
+    return {
+        'claude-code.yaml': claude_code,
+        'hermes.yaml': hermes,
+        'codex.yaml': codex,
+    }
+
+
+def generate_description_md(category: str) -> str:
+    """Generate standardized DESCRIPTION.md for a category."""
+    return f'---\ndescription: "Skills for {category} category"\n---\n'
 
 
 def main():
@@ -988,15 +1016,26 @@ def main():
         for name, desc, trigger, details in skills:
             skill_dir = cat_dir / name
             skill_dir.mkdir(parents=True, exist_ok=True)
-            skill_path = skill_dir / "SKILL.md"
-            content = generate_skill_md(category, name, desc, trigger, details)
-            skill_path.write_text(content)
-            total += 1
-        # Write DESCRIPTION.md
-        desc_path = cat_dir / "DESCRIPTION.md"
-        desc_path.write_text(generate_description_md(category, skills))
 
-    print(f"Generated {total} SKILL.md files across {len(CATALOG)} categories.")
+            # Write universal SKILL.md
+            skill_path = skill_dir / "SKILL.md"
+            content = generate_skill_md(name, desc, trigger, details)
+            skill_path.write_text(content)
+
+            # Write mount files
+            mounts_dir = skill_dir / "mounts"
+            mounts_dir.mkdir(parents=True, exist_ok=True)
+            mounts = generate_mounts(category, name, desc, trigger)
+            for filename, mount_content in mounts.items():
+                (mounts_dir / filename).write_text(mount_content)
+
+            total += 1
+
+        # Write standardized DESCRIPTION.md
+        desc_path = cat_dir / "DESCRIPTION.md"
+        desc_path.write_text(generate_description_md(category))
+
+    print(f"Generated {total} skills (SKILL.md + 3 mount files each) across {len(CATALOG)} categories.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,6 @@
+interface:
+  display_name: "huggingface-hub"
+  short_description: "HuggingFace hf CLI: search/download/upload models, datasets."
+  default_prompt: "Use $huggingface-hub to help with huggingface hub tasks."
+policy:
+  allow_implicit_invocation: true

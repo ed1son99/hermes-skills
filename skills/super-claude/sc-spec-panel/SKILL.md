@@ -1,8 +1,8 @@
 ---
 name: sc-spec-panel
 description: 多专家规格审查和改进
-category: super-claude
 triggers: [sc:spec-panel, 规格, 审查, 规范]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-spec-panel

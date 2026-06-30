@@ -1,8 +1,8 @@
 ---
 name: tools-deps-upgrade
 description: 依赖升级策略
-category: agent-tools
 triggers: [deps upgrade, 依赖升级, 版本升级]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-deps-upgrade

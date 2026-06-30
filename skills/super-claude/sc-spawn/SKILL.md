@@ -1,8 +1,8 @@
 ---
 name: sc-spawn
 description: 元系统任务编排
-category: super-claude
 triggers: [sc:spawn, 编排, 任务分解, 委派]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-spawn

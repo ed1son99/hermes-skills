@@ -1,0 +1,5 @@
+version: "2.3.0"
+author: Hermes Agent
+license: MIT
+platforms: [linux, macos, windows]
+tags: [PDF, Documents, Research, Arxiv, Text-Extraction, OCR]

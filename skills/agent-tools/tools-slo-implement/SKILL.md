@@ -1,8 +1,8 @@
 ---
 name: tools-slo-implement
 description: SLO 实现指南
-category: agent-tools
 triggers: [SLO, SLA, 服务水平, 可靠性]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-slo-implement

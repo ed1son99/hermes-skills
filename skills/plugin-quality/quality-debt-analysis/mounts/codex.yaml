@@ -1,0 +1,6 @@
+interface:
+  display_name: "quality-debt-analysis"
+  short_description: "技术债识别 — 优先级排序、工作量估算、重构路线图"
+  default_prompt: "Use $quality-debt-analysis to help with quality debt analysis tasks."
+policy:
+  allow_implicit_invocation: true

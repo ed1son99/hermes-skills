@@ -1,8 +1,8 @@
 ---
 name: sc-business-panel
 description: 商业面板分析系统
-category: super-claude
 triggers: [sc:business-panel, 商业分析, 战略]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-business-panel

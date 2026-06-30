@@ -1,8 +1,8 @@
 ---
 name: tools-prompt-optimize
 description: AI Prompt 优化
-category: agent-tools
 triggers: [prompt optimize, prompt工程, 提示词优化]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-prompt-optimize

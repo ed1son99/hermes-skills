@@ -1,8 +1,8 @@
 ---
 name: libtv-skill
 description: LibTV AI 图像视频创作 — 通过 liblib.tv AI 能力生成和编辑图片/视频
-category: ai-media
 triggers: [liblib, libtv, AI图片, AI视频, 文生图, 文生视频, 图生视频, 动画, 风格迁移, MV, 短剧, 海报]
+platforms: [claude-code, hermes, codex]
 ---
 
 # libtv-skill

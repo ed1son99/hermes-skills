@@ -1,0 +1,6 @@
+interface:
+  display_name: "powerpoint"
+  short_description: "Create, read, edit .pptx decks, slides, notes, templates."
+  default_prompt: "Use $powerpoint to help with powerpoint tasks."
+policy:
+  allow_implicit_invocation: true

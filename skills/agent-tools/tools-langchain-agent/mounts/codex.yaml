@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-langchain-agent"
+  short_description: "LangChain/LangGraph Agent 脚手架"
+  default_prompt: "Use $tools-langchain-agent to help with tools langchain agent tasks."
+policy:
+  allow_implicit_invocation: true

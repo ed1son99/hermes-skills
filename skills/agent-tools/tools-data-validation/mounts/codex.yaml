@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-data-validation"
+  short_description: "数据验证流水线"
+  default_prompt: "Use $tools-data-validation to help with tools data validation tasks."
+policy:
+  allow_implicit_invocation: true

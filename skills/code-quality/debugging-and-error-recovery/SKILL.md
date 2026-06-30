@@ -1,8 +1,8 @@
 ---
 name: debugging-and-error-recovery
 description: 系统化根因调试 — 从失败到修复的完整流程
-category: code-quality
 triggers: [debug, 调试, bug, 错误, error, 失败, 根因, root cause, 排查]
+platforms: [claude-code, hermes, codex]
 ---
 
 # debugging-and-error-recovery

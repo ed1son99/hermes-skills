@@ -1,8 +1,8 @@
 ---
 name: development-scaffold
 description: 项目脚手架生成 — 现代化项目结构、组件和样板代码
-category: plugin-development
 triggers: [scaffold, 脚手架, 项目初始化, 模板, boilerplate, 创建项目]
+platforms: [claude-code, hermes, codex]
 ---
 
 # development-scaffold

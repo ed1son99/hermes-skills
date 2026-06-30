@@ -1,0 +1,6 @@
+interface:
+  display_name: "heartmula"
+  short_description: "HeartMuLa: Suno-like song generation from lyrics + tags."
+  default_prompt: "Use $heartmula to help with heartmula tasks."
+policy:
+  allow_implicit_invocation: true

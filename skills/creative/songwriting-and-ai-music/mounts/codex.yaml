@@ -1,0 +1,6 @@
+interface:
+  display_name: "songwriting-and-ai-music"
+  short_description: "Songwriting craft and Suno AI music prompts."
+  default_prompt: "Use $songwriting-and-ai-music to help with songwriting and ai music tasks."
+policy:
+  allow_implicit_invocation: true

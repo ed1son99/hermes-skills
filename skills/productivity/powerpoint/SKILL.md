@@ -1,8 +1,8 @@
 ---
 name: powerpoint
-description: "Create, read, edit .pptx decks, slides, notes, templates."
-license: Proprietary. LICENSE.txt has complete terms
-platforms: [linux, macos, windows]
+description: Create, read, edit .pptx decks, slides, notes, templates.
+triggers: [powerpoint, create]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Powerpoint Skill

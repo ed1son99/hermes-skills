@@ -1,8 +1,8 @@
 ---
 name: loop
 description: CLI 循环 — 按间隔重复执行 prompt 或 slash command
-category: cli-commands
 triggers: [/loop, 循环, 重复, poll, 定时, 监控]
+platforms: [claude-code, hermes, codex]
 ---
 
 # loop

@@ -1,8 +1,8 @@
 ---
 name: browser-testing-with-devtools
 description: 浏览器测试 — 通过 Chrome DevTools MCP 在真实浏览器中测试
-category: devops-release
 triggers: [browser, 浏览器, Chrome, DevTools, DOM, console, network, 调试, E2E]
+platforms: [claude-code, hermes, codex]
 ---
 
 # browser-testing-with-devtools

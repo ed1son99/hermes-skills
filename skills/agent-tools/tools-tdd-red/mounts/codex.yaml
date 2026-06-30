@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-tdd-red"
+  short_description: "TDD Red 阶段 — 编写全面的失败测试"
+  default_prompt: "Use $tools-tdd-red to help with tools tdd red tasks."
+policy:
+  allow_implicit_invocation: true

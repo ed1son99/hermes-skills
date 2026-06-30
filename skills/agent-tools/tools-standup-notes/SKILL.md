@@ -1,8 +1,8 @@
 ---
 name: tools-standup-notes
 description: 站会记录生成器
-category: agent-tools
 triggers: [standup, 站会, 日报, 进度]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-standup-notes

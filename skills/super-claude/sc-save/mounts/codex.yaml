@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-save"
+  short_description: "会话上下文持久化"
+  default_prompt: "Use $sc-save to help with sc save tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "maps"
+  short_description: "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM."
+  default_prompt: "Use $maps to help with maps tasks."
+policy:
+  allow_implicit_invocation: true

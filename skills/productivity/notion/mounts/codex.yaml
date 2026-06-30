@@ -1,0 +1,6 @@
+interface:
+  display_name: "notion"
+  short_description: "Notion API + ntn CLI: pages, databases, markdown, Workers."
+  default_prompt: "Use $notion to help with notion tasks."
+policy:
+  allow_implicit_invocation: true

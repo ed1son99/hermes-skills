@@ -1,0 +1,6 @@
+interface:
+  display_name: "operations-incident-response"
+  short_description: "生产事件响应 — 紧急分诊、RCA、事后分析"
+  default_prompt: "Use $operations-incident-response to help with operations incident response tasks."
+policy:
+  allow_implicit_invocation: true

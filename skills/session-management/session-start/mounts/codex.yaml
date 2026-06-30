@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-start"
+  short_description: "创建新的开发会话记录"
+  default_prompt: "Use $session-start to help with session start tasks."
+policy:
+  allow_implicit_invocation: true

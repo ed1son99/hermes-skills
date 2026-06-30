@@ -1,0 +1,6 @@
+interface:
+  display_name: "libtv-cli"
+  short_description: "LibTV 官方 CLI — 命令行操作 LibTV 画布"
+  default_prompt: "Use $libtv-cli to help with libtv cli tasks."
+policy:
+  allow_implicit_invocation: true

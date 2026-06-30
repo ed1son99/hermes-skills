@@ -1,0 +1,5 @@
+version: "5.1.0"
+author: ['kshitijk4poor', 'alt-glitch', 'purzbeats']
+license: MIT
+platforms: [macos, linux, windows]
+tags: []

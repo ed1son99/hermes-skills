@@ -1,8 +1,8 @@
 ---
 name: tools-k8s-manifest
 description: Kubernetes Manifest 生成
-category: agent-tools
 triggers: [k8s, kubernetes, manifest, 容器编排, 部署]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-k8s-manifest

@@ -1,8 +1,8 @@
 ---
 name: ui-ux-pro-max
 description: UI/UX 专业级设计系统 — 前端界面工程化
-category: design-system
 triggers: [UI, UX, 设计系统, design system, 前端设计, 组件库]
+platforms: [claude-code, hermes, codex]
 ---
 
 # ui-ux-pro-max

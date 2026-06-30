@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-context-restore"
+  short_description: "恢复保存的项目上下文"
+  default_prompt: "Use $tools-context-restore to help with tools context restore tasks."
+policy:
+  allow_implicit_invocation: true

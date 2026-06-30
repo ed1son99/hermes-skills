@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-update"
+  short_description: "更新当前开发会话"
+  default_prompt: "Use $session-update to help with session update tasks."
+policy:
+  allow_implicit_invocation: true

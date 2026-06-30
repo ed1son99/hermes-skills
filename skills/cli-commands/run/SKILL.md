@@ -1,8 +1,8 @@
 ---
 name: run
 description: CLI 启动 — 启动并驱动项目应用查看变更效果
-category: cli-commands
 triggers: [/run, run app, 启动, 运行, 截图, 查看效果]
+platforms: [claude-code, hermes, codex]
 ---
 
 # run

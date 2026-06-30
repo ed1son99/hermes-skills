@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-current"
+  short_description: "显示当前会话状态"
+  default_prompt: "Use $session-current to help with session current tasks."
+policy:
+  allow_implicit_invocation: true

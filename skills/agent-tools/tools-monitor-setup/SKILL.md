@@ -1,8 +1,8 @@
 ---
 name: tools-monitor-setup
 description: 监控和可观测性设置
-category: agent-tools
 triggers: [monitor, 监控, observability, 可观测性, Prometheus, Grafana]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-monitor-setup

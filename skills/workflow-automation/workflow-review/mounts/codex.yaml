@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-review"
+  short_description: "综合代码审查工作流 — 安全、性能、配置安全分析"
+  default_prompt: "Use $workflow-review to help with workflow review tasks."
+policy:
+  allow_implicit_invocation: true

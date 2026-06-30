@@ -1,0 +1,6 @@
+interface:
+  display_name: "performance-benchmark"
+  short_description: "负载测试与性能基准 — 智能场景生成"
+  default_prompt: "Use $performance-benchmark to help with performance benchmark tasks."
+policy:
+  allow_implicit_invocation: true

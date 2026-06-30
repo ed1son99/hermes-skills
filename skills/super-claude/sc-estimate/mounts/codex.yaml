@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-estimate"
+  short_description: "开发估算"
+  default_prompt: "Use $sc-estimate to help with sc estimate tasks."
+policy:
+  allow_implicit_invocation: true

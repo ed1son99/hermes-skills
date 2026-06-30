@@ -1,8 +1,8 @@
 ---
 name: quality-code-health
 description: 代码健康度评估 — 质量指标、测试覆盖率、文档、可维护性
-category: plugin-quality
 triggers: [code health, 代码健康, 质量, 覆盖率, 可维护性]
+platforms: [claude-code, hermes, codex]
 ---
 
 # quality-code-health

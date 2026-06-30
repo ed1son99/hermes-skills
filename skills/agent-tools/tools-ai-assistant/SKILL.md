@@ -1,8 +1,8 @@
 ---
 name: tools-ai-assistant
 description: AI 助手开发
-category: agent-tools
 triggers: [AI assistant, 助手, chatbot, 对话]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-ai-assistant

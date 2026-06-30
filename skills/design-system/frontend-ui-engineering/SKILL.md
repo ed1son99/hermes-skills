@@ -1,8 +1,8 @@
 ---
 name: frontend-ui-engineering
 description: 生产级前端 UI 工程 — 组件、布局、状态管理
-category: design-system
 triggers: [frontend, UI, 组件, component, 布局, layout, 状态管理, 前端工程]
+platforms: [claude-code, hermes, codex]
 ---
 
 # frontend-ui-engineering

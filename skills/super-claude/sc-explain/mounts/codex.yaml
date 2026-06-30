@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-explain"
+  short_description: "代码和概念解释"
+  default_prompt: "Use $sc-explain to help with sc explain tasks."
+policy:
+  allow_implicit_invocation: true

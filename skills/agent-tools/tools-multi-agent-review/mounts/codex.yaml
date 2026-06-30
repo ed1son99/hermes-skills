@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-multi-agent-review"
+  short_description: "多 Agent 综合代码审查"
+  default_prompt: "Use $tools-multi-agent-review to help with tools multi agent review tasks."
+policy:
+  allow_implicit_invocation: true

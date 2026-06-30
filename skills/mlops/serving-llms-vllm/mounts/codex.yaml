@@ -1,0 +1,6 @@
+interface:
+  display_name: "serving-llms-vllm"
+  short_description: "vLLM: high-throughput LLM serving, OpenAI API, quantization."
+  default_prompt: "Use $serving-llms-vllm to help with serving llms vllm tasks."
+policy:
+  allow_implicit_invocation: true

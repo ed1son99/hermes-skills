@@ -1,8 +1,8 @@
 ---
 name: tools-docker-optimize
 description: Docker 优化
-category: agent-tools
 triggers: [docker, 容器优化, Dockerfile, 镜像优化]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-docker-optimize

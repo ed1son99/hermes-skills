@@ -1,0 +1,6 @@
+interface:
+  display_name: "session-help"
+  short_description: "会话管理系统帮助"
+  default_prompt: "Use $session-help to help with session help tasks."
+policy:
+  allow_implicit_invocation: true

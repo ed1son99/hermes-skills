@@ -1,8 +1,8 @@
 ---
 name: tools-data-validation
 description: 数据验证流水线
-category: agent-tools
 triggers: [data validation, 数据验证, 数据质量]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-data-validation

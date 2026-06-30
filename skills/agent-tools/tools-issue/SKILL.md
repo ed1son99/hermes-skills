@@ -1,8 +1,8 @@
 ---
 name: tools-issue
 description: 分析和修复 GitHub issue
-category: agent-tools
 triggers: [issue, GitHub issue, bug fix, 修复]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-issue

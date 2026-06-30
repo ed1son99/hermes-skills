@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-agent"
+  short_description: "SuperClaude Agent 管理"
+  default_prompt: "Use $sc-agent to help with sc agent tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "quality-code-health"
+  short_description: "代码健康度评估 — 质量指标、测试覆盖率、文档、可维护性"
+  default_prompt: "Use $quality-code-health to help with quality code health tasks."
+policy:
+  allow_implicit_invocation: true

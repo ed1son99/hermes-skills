@@ -1,0 +1,6 @@
+interface:
+  display_name: "audiocraft-audio-generation"
+  short_description: "AudioCraft: MusicGen text-to-music, AudioGen text-to-sound."
+  default_prompt: "Use $audiocraft-audio-generation to help with audiocraft audio generation tasks."
+policy:
+  allow_implicit_invocation: true

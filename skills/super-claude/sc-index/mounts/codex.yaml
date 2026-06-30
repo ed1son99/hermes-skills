@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-index"
+  short_description: "项目文档和知识库生成"
+  default_prompt: "Use $sc-index to help with sc index tasks."
+policy:
+  allow_implicit_invocation: true

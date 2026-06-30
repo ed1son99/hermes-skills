@@ -1,0 +1,6 @@
+interface:
+  display_name: "teams-meeting-pipeline"
+  short_description: "Operate the Teams meeting summary pipeline via Hermes CLI — summarize meetings, inspect pipeline status, replay jobs, manage Microsoft Graph subscriptions."
+  default_prompt: "Use $teams-meeting-pipeline to help with teams meeting pipeline tasks."
+policy:
+  allow_implicit_invocation: true

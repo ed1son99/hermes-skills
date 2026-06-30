@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-test-harness"
+  short_description: "综合测试框架生成器"
+  default_prompt: "Use $tools-test-harness to help with tools test harness tasks."
+policy:
+  allow_implicit_invocation: true

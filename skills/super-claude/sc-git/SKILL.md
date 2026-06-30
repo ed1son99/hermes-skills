@@ -1,8 +1,8 @@
 ---
 name: sc-git
 description: Git 操作
-category: super-claude
 triggers: [sc:git, git, commit, 提交]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-git

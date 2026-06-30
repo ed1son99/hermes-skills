@@ -1,0 +1,6 @@
+interface:
+  display_name: "update-config"
+  short_description: "Claude Code 配置管理 — settings.json 和 hooks 配置"
+  default_prompt: "Use $update-config to help with update config tasks."
+policy:
+  allow_implicit_invocation: true

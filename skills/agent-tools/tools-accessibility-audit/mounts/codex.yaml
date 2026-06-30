@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-accessibility-audit"
+  short_description: "无障碍审计和测试"
+  default_prompt: "Use $tools-accessibility-audit to help with tools accessibility audit tasks."
+policy:
+  allow_implicit_invocation: true

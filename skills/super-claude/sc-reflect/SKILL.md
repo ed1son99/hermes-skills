@@ -1,8 +1,8 @@
 ---
 name: sc-reflect
 description: 任务反思和验证
-category: super-claude
 triggers: [sc:reflect, 反思, 验证, 回顾]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-reflect

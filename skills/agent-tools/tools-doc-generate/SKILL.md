@@ -1,8 +1,8 @@
 ---
 name: tools-doc-generate
 description: 自动文档生成
-category: agent-tools
 triggers: [doc generate, 文档生成, API文档]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-doc-generate

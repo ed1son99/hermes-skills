@@ -1,0 +1,6 @@
+interface:
+  display_name: "security-compliance-check"
+  short_description: "合规验证 — GDPR, SOC2, HIPAA, PCI-DSS 等框架"
+  default_prompt: "Use $security-compliance-check to help with security compliance check tasks."
+policy:
+  allow_implicit_invocation: true

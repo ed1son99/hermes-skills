@@ -1,0 +1,6 @@
+interface:
+  display_name: "workflow-whats-next"
+  short_description: "分析当前对话并创建后续步骤文档"
+  default_prompt: "Use $workflow-whats-next to help with workflow whats next tasks."
+policy:
+  allow_implicit_invocation: true

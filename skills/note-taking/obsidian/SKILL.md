@@ -1,7 +1,8 @@
 ---
 name: obsidian
 description: Read, search, create, and edit notes in the Obsidian vault.
-platforms: [linux, macos, windows]
+triggers: [obsidian, read]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Obsidian Vault

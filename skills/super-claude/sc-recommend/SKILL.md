@@ -1,8 +1,8 @@
 ---
 name: sc-recommend
 description: 超智能命令推荐引擎
-category: super-claude
 triggers: [sc:recommend, 推荐, 命令推荐]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-recommend

@@ -1,0 +1,6 @@
+interface:
+  display_name: "context-engineering"
+  short_description: "上下文工程 — 优化 Agent 上下文配置"
+  default_prompt: "Use $context-engineering to help with context engineering tasks."
+policy:
+  allow_implicit_invocation: true

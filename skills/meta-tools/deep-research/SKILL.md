@@ -1,8 +1,8 @@
 ---
 name: deep-research
 description: 深度研究 — 扇形网络搜索、获取来源、对抗性验证、综合引用报告
-category: meta-tools
 triggers: [deep research, 深度研究, 调研报告, fact-check, 多源验证, 综合报告]
+platforms: [claude-code, hermes, codex]
 ---
 
 # deep-research

@@ -1,0 +1,6 @@
+interface:
+  display_name: "security-audit"
+  short_description: "综合安全审计 — 多阶段编排、自动 agent 选择"
+  default_prompt: "Use $security-audit to help with security audit tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "operations-health-check"
+  short_description: "系统健康检查 — 生产监控和事件检测"
+  default_prompt: "Use $operations-health-check to help with operations health check tasks."
+policy:
+  allow_implicit_invocation: true

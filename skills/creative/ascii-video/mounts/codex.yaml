@@ -1,0 +1,6 @@
+interface:
+  display_name: "ascii-video"
+  short_description: "ASCII video: convert video/audio to colored ASCII MP4/GIF."
+  default_prompt: "Use $ascii-video to help with ascii video tasks."
+policy:
+  allow_implicit_invocation: true

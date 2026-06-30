@@ -1,0 +1,6 @@
+interface:
+  display_name: "shipping-and-launch"
+  short_description: "发布与上线 — 生产环境部署准备"
+  default_prompt: "Use $shipping-and-launch to help with shipping and launch tasks."
+policy:
+  allow_implicit_invocation: true

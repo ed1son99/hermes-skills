@@ -1,8 +1,8 @@
 ---
 name: tools-multi-agent-review
 description: 多 Agent 综合代码审查
-category: agent-tools
 triggers: [multi-agent review, 多agent审查, 综合审查]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-multi-agent-review

@@ -1,0 +1,6 @@
+interface:
+  display_name: "performance-profile"
+  short_description: "综合性能分析 — 瓶颈识别和优化建议"
+  default_prompt: "Use $performance-profile to help with performance profile tasks."
+policy:
+  allow_implicit_invocation: true

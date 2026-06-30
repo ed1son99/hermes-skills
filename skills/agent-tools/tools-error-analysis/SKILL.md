@@ -1,8 +1,8 @@
 ---
 name: tools-error-analysis
 description: 错误分析和解决
-category: agent-tools
 triggers: [error analysis, 错误分析, bug分析]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-error-analysis

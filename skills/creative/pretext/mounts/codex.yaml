@@ -1,0 +1,6 @@
+interface:
+  display_name: "pretext"
+  short_description: "Use when building creative browser demos with @chenglou/pretext — DOM-free text layout for ASCII art, typographic flow around obstacles, text-as-geometry games, kinetic typography, and text-powered generative art. Produces single-file HTML demos by default."
+  default_prompt: "Use $pretext to help with pretext tasks."
+policy:
+  allow_implicit_invocation: true

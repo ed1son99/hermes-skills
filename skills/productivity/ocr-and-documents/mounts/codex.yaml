@@ -1,0 +1,6 @@
+interface:
+  display_name: "ocr-and-documents"
+  short_description: "Extract text from PDFs/scans (pymupdf, marker-pdf)."
+  default_prompt: "Use $ocr-and-documents to help with ocr and documents tasks."
+policy:
+  allow_implicit_invocation: true

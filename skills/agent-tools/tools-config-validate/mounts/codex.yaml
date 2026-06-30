@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-config-validate"
+  short_description: "配置验证"
+  default_prompt: "Use $tools-config-validate to help with tools config validate tasks."
+policy:
+  allow_implicit_invocation: true

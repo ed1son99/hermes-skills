@@ -1,0 +1,6 @@
+interface:
+  display_name: "documentation-docs-gen"
+  short_description: "自动文档生成 — API 文档、用户指南、交互式文档"
+  default_prompt: "Use $documentation-docs-gen to help with documentation docs gen tasks."
+policy:
+  allow_implicit_invocation: true

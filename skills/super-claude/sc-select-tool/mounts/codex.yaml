@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-select-tool"
+  short_description: "智能 MCP 工具选择"
+  default_prompt: "Use $sc-select-tool to help with sc select tool tasks."
+policy:
+  allow_implicit_invocation: true

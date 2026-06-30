@@ -1,15 +1,8 @@
 ---
 name: hermes-agent
-description: "Configure, extend, or contribute to Hermes Agent."
-version: 2.2.0
-author: Hermes Agent + Teknium
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [hermes, setup, configuration, multi-agent, spawning, cli, gateway, development]
-    homepage: https://github.com/NousResearch/hermes-agent
-    related_skills: [claude-code, codex, opencode]
+description: Configure, extend, or contribute to Hermes Agent.
+triggers: [hermes-agent, hermes, setup, configuration, multi-agent, spawning, cli, gateway, development, configure, hermes agent]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Hermes Agent

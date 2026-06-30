@@ -1,0 +1,6 @@
+interface:
+  display_name: "design-md"
+  short_description: "Author/validate/export Google's DESIGN.md token spec files."
+  default_prompt: "Use $design-md to help with design md tasks."
+policy:
+  allow_implicit_invocation: true

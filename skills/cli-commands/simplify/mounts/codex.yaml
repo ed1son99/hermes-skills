@@ -1,0 +1,6 @@
+interface:
+  display_name: "simplify"
+  short_description: "CLI 代码简化 — 审查变更代码的复用、简化、效率和抽象改进"
+  default_prompt: "Use $simplify to help with simplify tasks."
+policy:
+  allow_implicit_invocation: true

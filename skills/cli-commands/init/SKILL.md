@@ -1,8 +1,8 @@
 ---
 name: init
 description: CLI 初始化 — 创建新的 CLAUDE.md 文件记录代码库文档
-category: cli-commands
 triggers: [/init, CLAUDE.md, 初始化, 文档, 代码库, project docs]
+platforms: [claude-code, hermes, codex]
 ---
 
 # init

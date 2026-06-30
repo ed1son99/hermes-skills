@@ -1,7 +1,8 @@
 ---
 name: canvas-apps
 description: Build interactive single-file HTML canvas applications — drag-and-drop staging tools, director consoles, visual editors. Use when the user asks for a visual canvas tool with draggable elements, pan/zoom, touch gestures, or scene management.
-user-invocable: true
+triggers: [canvas-apps, build, html, use]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Canvas Apps — Interactive HTML Canvas Applications

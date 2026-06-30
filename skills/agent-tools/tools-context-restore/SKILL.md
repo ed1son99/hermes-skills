@@ -1,8 +1,8 @@
 ---
 name: tools-context-restore
 description: 恢复保存的项目上下文
-category: agent-tools
 triggers: [context restore, 恢复上下文, 项目上下文]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-context-restore

@@ -1,8 +1,8 @@
 ---
 name: graphify
 description: Graphify — 将任何输入转化为持久知识图谱
-category: meta-tools
 triggers: [graphify, 知识图谱, knowledge graph, 代码关系, 文件关系, 项目结构]
+platforms: [claude-code, hermes, codex]
 ---
 
 # graphify

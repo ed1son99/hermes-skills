@@ -1,8 +1,8 @@
 ---
 name: fewer-permission-prompts
 description: 减少权限提示 — 扫描转录记录并添加 allowlist
-category: claude-config
 triggers: [permission, 权限, allowlist, 允许, 减少提示, 自动允许]
+platforms: [claude-code, hermes, codex]
 ---
 
 # fewer-permission-prompts

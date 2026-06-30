@@ -1,8 +1,8 @@
 ---
 name: tools-refactor-clean
 description: 重构和清理代码
-category: agent-tools
 triggers: [refactor, 重构, 清理, clean code]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-refactor-clean

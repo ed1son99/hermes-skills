@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-cleanup"
+  short_description: "系统化清理代码"
+  default_prompt: "Use $sc-cleanup to help with sc cleanup tasks."
+policy:
+  allow_implicit_invocation: true

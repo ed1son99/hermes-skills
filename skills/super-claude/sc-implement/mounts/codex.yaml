@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-implement"
+  short_description: "功能实现"
+  default_prompt: "Use $sc-implement to help with sc implement tasks."
+policy:
+  allow_implicit_invocation: true

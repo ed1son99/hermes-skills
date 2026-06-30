@@ -1,8 +1,8 @@
 ---
 name: sc-design
 description: 系统架构设计
-category: super-claude
 triggers: [sc:design, 设计, 架构, API设计]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-design

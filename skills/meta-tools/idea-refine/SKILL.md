@@ -1,8 +1,8 @@
 ---
 name: idea-refine
 description: 想法精炼 — 通过结构化发散和收敛思维将原始想法打磨为可执行概念
-category: meta-tools
 triggers: [ideate, refine, 想法, 打磨, 头脑风暴, brainstorm, stress-test]
+platforms: [claude-code, hermes, codex]
 ---
 
 # idea-refine

@@ -1,15 +1,8 @@
 ---
 name: ai-pipeline-orchestrator
-description: "Orchestrate multi-AI pipelines: Hermes coordinates Claude (brain/reviewer) and Codex (executor/writer) in a chained workflow"
-version: 1.0.0
-author: Hermes Agent
-created_by: agent
-license: MIT
-platforms: [macos, linux]
-metadata:
-  hermes:
-    tags: [multi-agent, pipeline, orchestration, claude, codex, coordination, workflow]
-    related_skills: [claude-code, codex, hermes-agent]
+description: Orchestrate multi-AI pipelines: Hermes coordinates Claude (brain/reviewer) and Codex (executor/writer) in a chained workflow
+triggers: [ai-pipeline-orchestrator, multi-agent, pipeline, orchestration, claude, codex, coordination, workflow, orchestrate, ai, hermes]
+platforms: [claude-code, hermes, codex]
 ---
 
 # AI Pipeline Orchestrator

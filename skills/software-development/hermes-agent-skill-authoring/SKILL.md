@@ -1,14 +1,8 @@
 ---
 name: hermes-agent-skill-authoring
-description: "Author in-repo SKILL.md: frontmatter, validator, structure, and writing-quality principles."
-version: 1.1.0
-author: Hermes Agent
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [skills, authoring, hermes-agent, conventions, skill-md]
-    related_skills: [plan, requesting-code-review]
+description: Author in-repo SKILL.md: frontmatter, validator, structure, and writing-quality principles.
+triggers: [hermes-agent-skill-authoring, skills, authoring, hermes-agent, conventions, skill-md, author, skill]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Authoring Hermes-Agent Skills (in-repo)

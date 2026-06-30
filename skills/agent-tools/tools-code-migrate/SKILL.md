@@ -1,8 +1,8 @@
 ---
 name: tools-code-migrate
 description: 代码迁移助手
-category: agent-tools
 triggers: [migrate, 迁移, 升级, 版本迁移, 代码迁移]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-code-migrate

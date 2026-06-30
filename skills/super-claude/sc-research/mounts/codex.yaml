@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-research"
+  short_description: "深度网络调研"
+  default_prompt: "Use $sc-research to help with sc research tasks."
+policy:
+  allow_implicit_invocation: true

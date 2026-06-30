@@ -1,8 +1,8 @@
 ---
 name: code-simplification
 description: 代码简化 — 重构使代码更清晰
-category: code-quality
 triggers: [simplify, 简化, refactor, 重构, clean code, 清晰, 可读性]
+platforms: [claude-code, hermes, codex]
 ---
 
 # code-simplification

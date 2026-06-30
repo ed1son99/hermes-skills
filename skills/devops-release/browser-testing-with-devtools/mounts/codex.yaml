@@ -1,0 +1,6 @@
+interface:
+  display_name: "browser-testing-with-devtools"
+  short_description: "浏览器测试 — 通过 Chrome DevTools MCP 在真实浏览器中测试"
+  default_prompt: "Use $browser-testing-with-devtools to help with browser testing with devtools tasks."
+policy:
+  allow_implicit_invocation: true

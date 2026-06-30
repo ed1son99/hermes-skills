@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-db-migrate"
+  short_description: "数据库迁移策略与实现"
+  default_prompt: "Use $tools-db-migrate to help with tools db migrate tasks."
+policy:
+  allow_implicit_invocation: true

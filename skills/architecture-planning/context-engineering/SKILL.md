@@ -1,8 +1,8 @@
 ---
 name: context-engineering
 description: 上下文工程 — 优化 Agent 上下文配置
-category: architecture-planning
 triggers: [context, 上下文, CLAUDE.md, rules, 配置, agent setup]
+platforms: [claude-code, hermes, codex]
 ---
 
 # context-engineering

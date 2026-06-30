@@ -1,8 +1,8 @@
 ---
 name: operations-deploy-validate
 description: 部署前验证 — 测试、安全检查、配置安全、环境就绪
-category: plugin-operations
 triggers: [deploy, 部署验证, pre-deploy, 上线检查, validation]
+platforms: [claude-code, hermes, codex]
 ---
 
 # operations-deploy-validate

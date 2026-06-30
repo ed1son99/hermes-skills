@@ -1,8 +1,8 @@
 ---
 name: tools-api-mock
 description: API Mock 框架
-category: agent-tools
 triggers: [API mock, mock, 模拟, 接口模拟, stub]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-api-mock

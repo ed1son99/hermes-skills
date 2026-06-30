@@ -1,8 +1,8 @@
 ---
 name: director-master
 description: 山音超级导演大师 — 从剧本到九列分镜表的完整导演工作流
-category: film-making
 triggers: [分镜, 分镜表, 导演, 镜头语言, 运镜, 构图, 景别, 剪辑节奏, 视听风格, storyboard, 导演方案, 拍摄方案]
+platforms: [claude-code, hermes, codex]
 ---
 
 # director-master

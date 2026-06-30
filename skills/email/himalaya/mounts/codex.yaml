@@ -1,0 +1,6 @@
+interface:
+  display_name: "himalaya"
+  short_description: "Himalaya CLI: IMAP/SMTP email from terminal."
+  default_prompt: "Use $himalaya to help with himalaya tasks."
+policy:
+  allow_implicit_invocation: true

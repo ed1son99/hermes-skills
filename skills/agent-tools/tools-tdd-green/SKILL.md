@@ -1,8 +1,8 @@
 ---
 name: tools-tdd-green
 description: TDD Green 阶段 — 实现最小代码使测试通过
-category: agent-tools
 triggers: [TDD green, 测试通过, 实现]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-tdd-green

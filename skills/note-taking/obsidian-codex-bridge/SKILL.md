@@ -1,7 +1,8 @@
 ---
 name: obsidian-codex-bridge
 description: 连接 Obsidian vault 中 Codex Archive 快照与 Hermes 技能体系的桥接 Skill。告诉我 vault 里有哪些可参考的 Codex 技能，并能按需选择性迁移。
-platforms: [macos]
+triggers: [obsidian-codex-bridge, 连接, 快照与, 技能体系, 的桥接, 告诉我, 里有哪些, obsidian, codex archive, hermes, skill]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Obsidian ↔ Codex 桥接

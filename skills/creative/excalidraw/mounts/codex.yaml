@@ -1,0 +1,6 @@
+interface:
+  display_name: "excalidraw"
+  short_description: "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq)."
+  default_prompt: "Use $excalidraw to help with excalidraw tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-ai-assistant"
+  short_description: "AI 助手开发"
+  default_prompt: "Use $tools-ai-assistant to help with tools ai assistant tasks."
+policy:
+  allow_implicit_invocation: true

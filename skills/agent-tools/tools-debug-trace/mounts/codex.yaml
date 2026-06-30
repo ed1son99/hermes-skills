@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-debug-trace"
+  short_description: "调试和追踪配置"
+  default_prompt: "Use $tools-debug-trace to help with tools debug trace tasks."
+policy:
+  allow_implicit_invocation: true

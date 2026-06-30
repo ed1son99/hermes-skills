@@ -1,0 +1,6 @@
+interface:
+  display_name: "claude-code"
+  short_description: "Delegate coding to Claude Code CLI (features, PRs)."
+  default_prompt: "Use $claude-code to help with claude code tasks."
+policy:
+  allow_implicit_invocation: true

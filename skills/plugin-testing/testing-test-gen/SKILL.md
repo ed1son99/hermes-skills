@@ -1,8 +1,8 @@
 ---
 name: testing-test-gen
 description: 测试套件自动生成 — 多框架支持
-category: plugin-testing
 triggers: [test, 测试, test-gen, 单元测试, 组件测试, 生成测试]
+platforms: [claude-code, hermes, codex]
 ---
 
 # testing-test-gen

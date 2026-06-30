@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-spawn"
+  short_description: "元系统任务编排"
+  default_prompt: "Use $sc-spawn to help with sc spawn tasks."
+policy:
+  allow_implicit_invocation: true

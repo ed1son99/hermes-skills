@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-cost-optimize"
+  short_description: "云成本优化"
+  default_prompt: "Use $tools-cost-optimize to help with tools cost optimize tasks."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "hermes-agent"
+  short_description: "Configure, extend, or contribute to Hermes Agent."
+  default_prompt: "Use $hermes-agent to help with hermes agent tasks."
+policy:
+  allow_implicit_invocation: true

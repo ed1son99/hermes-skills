@@ -1,8 +1,8 @@
 ---
 name: sc-agent
 description: SuperClaude Agent 管理
-category: super-claude
 triggers: [sc:agent, agent管理]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-agent

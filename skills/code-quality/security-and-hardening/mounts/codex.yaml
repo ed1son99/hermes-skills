@@ -1,0 +1,6 @@
+interface:
+  display_name: "security-and-hardening"
+  short_description: "安全加固 — 防范漏洞"
+  default_prompt: "Use $security-and-hardening to help with security and hardening tasks."
+policy:
+  allow_implicit_invocation: true

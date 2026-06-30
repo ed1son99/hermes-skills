@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Hermes Agent
+license: Proprietary. LICENSE.txt has complete terms
+platforms: [linux, macos, windows]
+tags: []

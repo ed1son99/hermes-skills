@@ -1,8 +1,8 @@
 ---
 name: test-driven-development
 description: 测试驱动开发 — 严格 red-green-refactor 循环
-category: development-methodology
 triggers: [TDD, test-driven, 测试驱动, red-green-refactor, 单元测试, unit test]
+platforms: [claude-code, hermes, codex]
 ---
 
 # test-driven-development

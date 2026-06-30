@@ -1,8 +1,8 @@
 ---
 name: tools-accessibility-audit
 description: 无障碍审计和测试
-category: agent-tools
 triggers: [accessibility, 无障碍, a11y, WCAG, 可访问性]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-accessibility-audit

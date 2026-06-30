@@ -1,8 +1,8 @@
 ---
 name: code-review-and-quality
 description: 多维度代码审查 — correctness, readability, architecture, security, performance
-category: code-quality
 triggers: [review, 审查, code review, 代码质量, quality, 审查代码]
+platforms: [claude-code, hermes, codex]
 ---
 
 # code-review-and-quality

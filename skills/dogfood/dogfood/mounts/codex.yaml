@@ -1,0 +1,6 @@
+interface:
+  display_name: "dogfood"
+  short_description: "Exploratory QA of web apps: find bugs, evidence, reports."
+  default_prompt: "Use $dogfood to help with dogfood tasks."
+policy:
+  allow_implicit_invocation: true

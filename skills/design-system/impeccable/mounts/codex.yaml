@@ -1,0 +1,6 @@
+interface:
+  display_name: "impeccable"
+  short_description: "前端界面设计精修 — 网站、Landing page、Dashboard、组件、表单"
+  default_prompt: "Use $impeccable to help with impeccable tasks."
+policy:
+  allow_implicit_invocation: true

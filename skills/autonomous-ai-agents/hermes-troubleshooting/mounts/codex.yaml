@@ -1,0 +1,6 @@
+interface:
+  display_name: "hermes-troubleshooting"
+  short_description: "Diagnose and fix a frozen, unresponsive, or slow Hermes Agent — process death, config rot, auxiliary timeout, profile mismatch, model issues."
+  default_prompt: "Use $hermes-troubleshooting to help with hermes troubleshooting tasks."
+policy:
+  allow_implicit_invocation: true

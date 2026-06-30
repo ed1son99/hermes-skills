@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-analyze"
+  short_description: "综合代码分析 — 质量、安全、性能、架构"
+  default_prompt: "Use $sc-analyze to help with sc analyze tasks."
+policy:
+  allow_implicit_invocation: true

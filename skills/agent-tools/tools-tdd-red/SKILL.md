@@ -1,8 +1,8 @@
 ---
 name: tools-tdd-red
 description: TDD Red 阶段 — 编写全面的失败测试
-category: agent-tools
 triggers: [TDD red, 编写测试, 失败测试]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-tdd-red

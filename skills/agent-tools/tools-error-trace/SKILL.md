@@ -1,8 +1,8 @@
 ---
 name: tools-error-trace
 description: 错误追踪和监控
-category: agent-tools
 triggers: [error tracking, 错误追踪, 监控, Sentry]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-error-trace

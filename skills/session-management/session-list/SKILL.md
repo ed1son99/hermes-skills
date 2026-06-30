@@ -1,8 +1,8 @@
 ---
 name: session-list
 description: 列出所有开发会话
-category: session-management
 triggers: [/session-list, session, 会话列表, 查看会话]
+platforms: [claude-code, hermes, codex]
 ---
 
 # session-list

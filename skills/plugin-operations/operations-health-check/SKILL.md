@@ -1,8 +1,8 @@
 ---
 name: operations-health-check
 description: 系统健康检查 — 生产监控和事件检测
-category: plugin-operations
 triggers: [health check, 健康检查, 监控, 生产, incident]
+platforms: [claude-code, hermes, codex]
 ---
 
 # operations-health-check

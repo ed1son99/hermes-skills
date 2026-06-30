@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-load"
+  short_description: "会话生命周期管理"
+  default_prompt: "Use $sc-load to help with sc load tasks."
+policy:
+  allow_implicit_invocation: true

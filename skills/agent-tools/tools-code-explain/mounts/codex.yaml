@@ -1,0 +1,6 @@
+interface:
+  display_name: "tools-code-explain"
+  short_description: "代码解释与分析"
+  default_prompt: "Use $tools-code-explain to help with tools code explain tasks."
+policy:
+  allow_implicit_invocation: true

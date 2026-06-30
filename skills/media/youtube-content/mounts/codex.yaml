@@ -1,0 +1,6 @@
+interface:
+  display_name: "youtube-content"
+  short_description: "YouTube transcripts to summaries, threads, blogs."
+  default_prompt: "Use $youtube-content to help with youtube content tasks."
+policy:
+  allow_implicit_invocation: true

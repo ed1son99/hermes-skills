@@ -1,8 +1,8 @@
 ---
 name: update-config
 description: Claude Code 配置管理 — settings.json 和 hooks 配置
-category: claude-config
 triggers: [settings, config, 配置, hook, permission, 权限, env, 环境变量, settings.json]
+platforms: [claude-code, hermes, codex]
 ---
 
 # update-config

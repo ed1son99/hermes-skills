@@ -1,0 +1,6 @@
+interface:
+  display_name: "doubt-driven-development"
+  short_description: "质疑驱动开发 — 每个非平凡决策经受对抗性审查"
+  default_prompt: "Use $doubt-driven-development to help with doubt driven development tasks."
+policy:
+  allow_implicit_invocation: true

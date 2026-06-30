@@ -1,8 +1,8 @@
 ---
 name: sc-troubleshoot
 description: 诊断和解决问题
-category: super-claude
 triggers: [sc:troubleshoot, 诊断, 排查, 修复]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-troubleshoot

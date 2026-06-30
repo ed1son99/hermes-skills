@@ -1,8 +1,8 @@
 ---
 name: security-audit
 description: 综合安全审计 — 多阶段编排、自动 agent 选择
-category: plugin-security
 triggers: [audit, 安全审计, security audit, 漏洞扫描, CVE]
+platforms: [claude-code, hermes, codex]
 ---
 
 # security-audit

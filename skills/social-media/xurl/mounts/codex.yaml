@@ -1,0 +1,6 @@
+interface:
+  display_name: "xurl"
+  short_description: "X/Twitter via xurl CLI: post, search, DM, media, v2 API."
+  default_prompt: "Use $xurl to help with xurl tasks."
+policy:
+  allow_implicit_invocation: true

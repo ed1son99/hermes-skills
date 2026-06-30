@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Hermes Agent (inspired by Claude Code /simplify)
+license: MIT
+platforms: [linux, macos, windows]
+tags: [code-review, cleanup, refactor, delegation, subagent, parallel, simplify]

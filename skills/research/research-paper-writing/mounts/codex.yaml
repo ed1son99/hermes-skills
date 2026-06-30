@@ -1,0 +1,6 @@
+interface:
+  display_name: "research-paper-writing"
+  short_description: "Write ML papers for NeurIPS/ICML/ICLR: design→submit."
+  default_prompt: "Use $research-paper-writing to help with research paper writing tasks."
+policy:
+  allow_implicit_invocation: true

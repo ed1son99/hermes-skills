@@ -1,0 +1,6 @@
+interface:
+  display_name: "macos-proxy-diagnostics"
+  short_description: "Systematic diagnosis of macOS proxy/VPN/TUN clients: detect when a proxy process is running but not actually proxying traffic."
+  default_prompt: "Use $macos-proxy-diagnostics to help with macos proxy diagnostics tasks."
+policy:
+  allow_implicit_invocation: true

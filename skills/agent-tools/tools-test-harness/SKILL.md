@@ -1,8 +1,8 @@
 ---
 name: tools-test-harness
 description: 综合测试框架生成器
-category: agent-tools
 triggers: [test harness, 测试框架, 测试工具]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-test-harness

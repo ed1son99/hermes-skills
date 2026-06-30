@@ -1,8 +1,8 @@
 ---
 name: simplify
 description: CLI 代码简化 — 审查变更代码的复用、简化、效率和抽象改进
-category: cli-commands
 triggers: [/simplify, simplify code, 简化代码, 重构, 清理]
+platforms: [claude-code, hermes, codex]
 ---
 
 # simplify

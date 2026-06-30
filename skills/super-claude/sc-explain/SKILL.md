@@ -1,8 +1,8 @@
 ---
 name: sc-explain
 description: 代码和概念解释
-category: super-claude
 triggers: [sc:explain, 解释, 讲解, 理解]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-explain

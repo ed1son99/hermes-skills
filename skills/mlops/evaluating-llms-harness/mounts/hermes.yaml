@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Orchestra Research
+license: MIT
+platforms: [linux, macos]
+tags: [Evaluation, LM Evaluation Harness, Benchmarking, MMLU, HumanEval, GSM8K, EleutherAI, Model Quality, Academic Benchmarks, Industry Standard]

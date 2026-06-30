@@ -1,8 +1,8 @@
 ---
 name: tools-ai-review
 description: AI/ML 代码审查
-category: agent-tools
 triggers: [AI review, ML review, AI代码审查, 机器学习]
+platforms: [claude-code, hermes, codex]
 ---
 
 # tools-ai-review

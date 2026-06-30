@@ -1,8 +1,8 @@
 ---
 name: verify
 description: CLI 验证 — 通过运行应用确认代码变更是否有效
-category: cli-commands
 triggers: [/verify, verify PR, 验证, 确认修复, 测试变更, 手动测试]
+platforms: [claude-code, hermes, codex]
 ---
 
 # verify

@@ -1,0 +1,6 @@
+interface:
+  display_name: "sc-improve"
+  short_description: "系统化改进"
+  default_prompt: "Use $sc-improve to help with sc improve tasks."
+policy:
+  allow_implicit_invocation: true

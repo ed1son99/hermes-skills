@@ -1,10 +1,8 @@
 ---
 name: canvas-3d-scene-builder
 description: Build interactive 3D scene/staging tools as single-file HTML apps using Canvas 2D — no Three.js. Covers perspective projection, orbit controls, hit testing, depth-sorted rendering, and 3D shape drawing (boxes, cylinders, panels). Use when the user asks for a visual director console, staging tool, 3D layout editor, or any interactive 3D scene in a browser without dependencies.
-user-invocable: true
-metadata:
-  hermes:
-    emoji: "🎬"
+triggers: [canvas-3d-scene-builder, build, html, canvas, three]
+platforms: [claude-code, hermes, codex]
 ---
 
 # Canvas 3D Scene Builder

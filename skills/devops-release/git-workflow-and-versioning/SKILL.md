@@ -1,8 +1,8 @@
 ---
 name: git-workflow-and-versioning
 description: Git 工作流与版本管理 — 结构化 Git 实践
-category: devops-release
 triggers: [git, commit, branch, PR, 分支, 合并, version, 版本]
+platforms: [claude-code, hermes, codex]
 ---
 
 # git-workflow-and-versioning

@@ -1,0 +1,6 @@
+interface:
+  display_name: "using-agent-skills"
+  short_description: "Agent Skill 发现与调用 — 元技能，管理所有其他 skill 的发现和调用"
+  default_prompt: "Use $using-agent-skills to help with using agent skills tasks."
+policy:
+  allow_implicit_invocation: true

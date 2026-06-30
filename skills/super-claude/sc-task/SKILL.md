@@ -1,8 +1,8 @@
 ---
 name: sc-task
 description: 复杂任务执行
-category: super-claude
 triggers: [sc:task, 任务, 执行, 工作流]
+platforms: [claude-code, hermes, codex]
 ---
 
 # sc-task

@@ -1,0 +1,6 @@
+interface:
+  display_name: "arxiv"
+  short_description: "Search arXiv papers by keyword, author, category, or ID."
+  default_prompt: "Use $arxiv to help with arxiv tasks."
+policy:
+  allow_implicit_invocation: true

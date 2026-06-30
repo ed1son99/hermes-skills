@@ -1,8 +1,8 @@
 ---
 name: planning-and-task-breakdown
 description: 工作拆解与任务规划 — 将工作分解为有序任务
-category: architecture-planning
 triggers: [plan, 计划, 任务, task, 拆解, breakdown, 估算, estimate]
+platforms: [claude-code, hermes, codex]
 ---
 
 # planning-and-task-breakdown
