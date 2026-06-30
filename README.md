@@ -1,6 +1,6 @@
 # Claude Code Skills Catalog
 
-完整 Claude Code Agent Skill 目录 — 221 个可复用的 AI Agent 技能，覆盖 38 个分类。
+完整 Claude Code Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。
 
 ## 分类总览
 
@@ -44,6 +44,7 @@
 | **software-development** | 9 | 软件开发：Plan、Spike、TDD、调试、代码审查、简化、Skill 创作 |
 | **dogfood** | 1 | 内部测试：Web App QA |
 | **yuanbao** | 1 | 元宝集成 |
+| **system-utilities** | 1 | 系统工具：Windows C 盘安全清理 |
 
 ## 目录结构
 
@@ -60,8 +61,8 @@ skills/
 
 ## 统计
 
-- **总 Skill 数**: 221
-- **总分类数**: 38
+- **总 Skill 数**: 222
+- **总分类数**: 39
 - **完整 SKILL.md 覆盖**: 100%
 
 ## 使用方式
