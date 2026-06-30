@@ -1,6 +1,6 @@
-# Claude Code Skills Catalog
+# Skills Catalog
 
-完整 Claude Code Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。
+完整 Claude Code / Cursor / Codex 等多平台 Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。
 
 ## 分类总览
 
