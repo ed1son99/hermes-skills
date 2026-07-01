@@ -1,0 +1,4 @@
+interface:
+  display_name: content-creation-publisher
+policy:
+  allow_implicit_invocation: true

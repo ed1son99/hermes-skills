@@ -1,0 +1,4 @@
+interface:
+  display_name: icon-generator
+policy:
+  allow_implicit_invocation: true

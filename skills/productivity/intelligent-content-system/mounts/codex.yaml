@@ -1,0 +1,4 @@
+interface:
+  display_name: intelligent-content-system
+policy:
+  allow_implicit_invocation: true

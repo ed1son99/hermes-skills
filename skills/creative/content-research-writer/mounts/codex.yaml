@@ -1,0 +1,4 @@
+interface:
+  display_name: content-research-writer
+policy:
+  allow_implicit_invocation: true

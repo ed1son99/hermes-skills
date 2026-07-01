@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Community, anbeime
+license: MIT
+platforms: [linux, macos, windows]
+tags: [content-creation-publisher, creative, automation]

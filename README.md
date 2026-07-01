@@ -1,6 +1,6 @@
 # Skills Catalog
 
-通用跨平台 Agent Skill 目录 — 250 个可复用的 AI Agent 技能，覆盖 39 个分类。  
+通用跨平台 Agent Skill 目录 — 255 个可复用的 AI Agent 技能，覆盖 39 个分类。  
 兼容 **Claude Code** / **Hermes** / **Codex (OpenAI)** / **Cursor** 等多平台。
 
 ## 通用架构
@@ -39,9 +39,9 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 | 分类 | 数量 | 说明 |
 |---|---|---|
 | **film-making** | 4 | 影视制作：分镜导演、剧本创作、运镜设计、Seedance 视频生成 |
-| **ai-media** | 5 | AI 媒体生成：LibTV 图片/视频、FLUX 文生图、MeiGen 多模型设计 |
+| **ai-media** | 6 | AI 媒体生成：LibTV 图片/视频、FLUX 文生图、MeiGen 多模型设计、TTS 语音合成 |
 | **design-system** | 13 | 设计系统：前端 UI 精修、设计系统工程化、Refactoring UI、Web Typography、UX Heuristics 等 |
-| **creative** | 20 | 创意设计：ASCII 艺术/视频、Canvas 3D/2D、Manim、p5.js、ComfyUI、信息图、音乐、内容工坊等 |
+| **creative** | 23 | 创意设计：ASCII 艺术/视频、Canvas 3D/2D、Manim、p5.js、ComfyUI、信息图、音乐、内容工坊、图标生成、内容研究写作等 |
 | **development-methodology** | 9 | 开发方法论：TDD、规格驱动、源码驱动、质疑驱动、增量实现、需求访谈、Design Sprint、文学编程、可观测性 |
 | **architecture-planning** | 5 | 架构规划：任务拆解、ADR、上下文工程、API 设计、弃用迁移 |
 | **code-quality** | 5 | 代码质量：多维度审查、简化、调试、安全加固、性能优化 |
@@ -69,7 +69,7 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 | **media** | 5 | 媒体：YouTube 字幕、YouTube 完整工具包、GIF 搜索、音乐生成、音频频谱 |
 | **mlops** | 7 | MLOps：HuggingFace、vLLM、llama.cpp、AudioCraft、SAM、W&B |
 | **note-taking** | 8 | 笔记：Obsidian 仓库管理、Codex 桥接、Obsidian Markdown/Bases/Canvas/CLI、Defuddle、Personal API |
-| **productivity** | 9 | 生产力：Airtable、Google Workspace、Notion、PowerPoint、Maps、PDF、OCR、Teams、Screenpipe |
+| **productivity** | 10 | 生产力：Airtable、Google Workspace、Notion、PowerPoint、Maps、PDF、OCR、Teams、Screenpipe、智能内容系统 |
 | **research** | 5 | 学术研究：arXiv、博客监控、LLM Wiki、Polymarket、论文写作 |
 | **smart-home** | 1 | 智能家居：Philips Hue |
 | **social-media** | 1 | 社交媒体：X/Twitter |
@@ -80,7 +80,7 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 
 ## 统计
 
-- **总 Skill 数**: 250
+- **总 Skill 数**: 255
 - **总分类数**: 39
 - **平台兼容**: Claude Code / Hermes / Codex / Cursor
 - **每个 Skill**: 1 通用核心 + 3 平台挂载配置
