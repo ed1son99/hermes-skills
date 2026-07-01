@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: addyosmani, Community
+license: MIT
+platforms: [linux, macos, windows]
+tags: [observability, monitoring, instrumentation, logging, metrics, tracing]

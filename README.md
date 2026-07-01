@@ -1,6 +1,6 @@
 # Skills Catalog
 
-通用跨平台 Agent Skill 目录 — 249 个可复用的 AI Agent 技能，覆盖 39 个分类。  
+通用跨平台 Agent Skill 目录 — 250 个可复用的 AI Agent 技能，覆盖 39 个分类。  
 兼容 **Claude Code** / **Hermes** / **Codex (OpenAI)** / **Cursor** 等多平台。
 
 ## 通用架构
@@ -42,7 +42,7 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 | **ai-media** | 5 | AI 媒体生成：LibTV 图片/视频、FLUX 文生图、MeiGen 多模型设计 |
 | **design-system** | 13 | 设计系统：前端 UI 精修、设计系统工程化、Refactoring UI、Web Typography、UX Heuristics 等 |
 | **creative** | 20 | 创意设计：ASCII 艺术/视频、Canvas 3D/2D、Manim、p5.js、ComfyUI、信息图、音乐、内容工坊等 |
-| **development-methodology** | 8 | 开发方法论：TDD、规格驱动、源码驱动、质疑驱动、增量实现、需求访谈、Design Sprint、文学编程 |
+| **development-methodology** | 9 | 开发方法论：TDD、规格驱动、源码驱动、质疑驱动、增量实现、需求访谈、Design Sprint、文学编程、可观测性 |
 | **architecture-planning** | 5 | 架构规划：任务拆解、ADR、上下文工程、API 设计、弃用迁移 |
 | **code-quality** | 5 | 代码质量：多维度审查、简化、调试、安全加固、性能优化 |
 | **devops-release** | 4 | DevOps 与发布：Git 工作流、上线部署、CI/CD、浏览器测试 |
@@ -80,7 +80,7 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 
 ## 统计
 
-- **总 Skill 数**: 249
+- **总 Skill 数**: 250
 - **总分类数**: 39
 - **平台兼容**: Claude Code / Hermes / Codex / Cursor
 - **每个 Skill**: 1 通用核心 + 3 平台挂载配置
