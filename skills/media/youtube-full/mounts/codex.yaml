@@ -1,0 +1,4 @@
+interface:
+  display_name: youtube-full
+policy:
+  allow_implicit_invocation: true

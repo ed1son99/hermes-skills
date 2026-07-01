@@ -1,0 +1,4 @@
+interface:
+  display_name: content-studio
+policy:
+  allow_implicit_invocation: true

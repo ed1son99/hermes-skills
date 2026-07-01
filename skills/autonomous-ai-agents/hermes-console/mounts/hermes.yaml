@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: dannyshmueli, Community
+license: MIT
+platforms: [macos, linux, windows]
+tags: [obsidian, hermes, plugin, console]

@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Romanescu11, Community
+license: MIT
+platforms: [linux, macos, windows]
+tags: [meta, automation, skills, learning, productivity]

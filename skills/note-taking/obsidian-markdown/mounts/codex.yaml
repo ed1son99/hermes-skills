@@ -1,0 +1,4 @@
+interface:
+  display_name: obsidian-markdown
+policy:
+  allow_implicit_invocation: true

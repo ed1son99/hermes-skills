@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: Community (MeiGen)
+license: MIT
+platforms: [linux, macos, windows]
+tags: [image-generation, video-generation, midjourney, flux, comfyui, ai-art]

@@ -1,0 +1,4 @@
+interface:
+  display_name: obsidian-bases
+policy:
+  allow_implicit_invocation: true

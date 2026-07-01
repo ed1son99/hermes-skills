@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: screenpipe, Community
+license: MIT
+platforms: [macos, linux, windows]
+tags: [screen-capture, memory, mcp, audio, productivity]

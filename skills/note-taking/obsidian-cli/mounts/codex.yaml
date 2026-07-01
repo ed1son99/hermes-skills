@@ -1,0 +1,4 @@
+interface:
+  display_name: obsidian-cli
+policy:
+  allow_implicit_invocation: true

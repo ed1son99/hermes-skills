@@ -1,0 +1,4 @@
+interface:
+  display_name: personal-api
+policy:
+  allow_implicit_invocation: true

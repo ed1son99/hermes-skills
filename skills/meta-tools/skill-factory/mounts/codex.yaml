@@ -1,0 +1,4 @@
+interface:
+  display_name: skill-factory
+policy:
+  allow_implicit_invocation: true

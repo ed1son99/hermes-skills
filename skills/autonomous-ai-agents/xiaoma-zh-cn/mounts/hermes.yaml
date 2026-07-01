@@ -1,0 +1,5 @@
+version: "1.0.0"
+author: fresh-claw (xiaoma), Community
+license: MIT
+platforms: [macos, linux, windows]
+tags: [chinese, localization, hermes, zh-cn, i18n]

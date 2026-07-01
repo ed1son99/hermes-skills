@@ -1,0 +1,4 @@
+interface:
+  display_name: xiaoma-zh-cn
+policy:
+  allow_implicit_invocation: true

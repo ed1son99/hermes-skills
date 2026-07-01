@@ -1,6 +1,6 @@
 # Skills Catalog
 
-通用跨平台 Agent Skill 目录 — 222 个可复用的 AI Agent 技能，覆盖 39 个分类。  
+通用跨平台 Agent Skill 目录 — 249 个可复用的 AI Agent 技能，覆盖 39 个分类。  
 兼容 **Claude Code** / **Hermes** / **Codex (OpenAI)** / **Cursor** 等多平台。
 
 ## 通用架构
@@ -39,16 +39,16 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 | 分类 | 数量 | 说明 |
 |---|---|---|
 | **film-making** | 4 | 影视制作：分镜导演、剧本创作、运镜设计、Seedance 视频生成 |
-| **ai-media** | 2 | AI 媒体生成：LibTV 图片/视频生成与编辑 |
-| **design-system** | 3 | 设计系统：前端 UI 精修、设计系统工程化 |
-| **creative** | 19 | 创意设计：ASCII 艺术/视频、Canvas 3D/2D、Manim、p5.js、ComfyUI、信息图、音乐等 |
-| **development-methodology** | 6 | 开发方法论：TDD、规格驱动、源码驱动、质疑驱动、增量实现、需求访谈 |
+| **ai-media** | 5 | AI 媒体生成：LibTV 图片/视频、FLUX 文生图、MeiGen 多模型设计 |
+| **design-system** | 13 | 设计系统：前端 UI 精修、设计系统工程化、Refactoring UI、Web Typography、UX Heuristics 等 |
+| **creative** | 20 | 创意设计：ASCII 艺术/视频、Canvas 3D/2D、Manim、p5.js、ComfyUI、信息图、音乐、内容工坊等 |
+| **development-methodology** | 8 | 开发方法论：TDD、规格驱动、源码驱动、质疑驱动、增量实现、需求访谈、Design Sprint、文学编程 |
 | **architecture-planning** | 5 | 架构规划：任务拆解、ADR、上下文工程、API 设计、弃用迁移 |
 | **code-quality** | 5 | 代码质量：多维度审查、简化、调试、安全加固、性能优化 |
 | **devops-release** | 4 | DevOps 与发布：Git 工作流、上线部署、CI/CD、浏览器测试 |
 | **cli-commands** | 7 | CLI 命令：代码审查、简化、验证、启动、循环、初始化、安全审查 |
 | **claude-config** | 5 | Claude 配置：设置管理、快捷键、API 参考、权限优化、Skill 发现 |
-| **meta-tools** | 3 | 元工具：知识图谱、想法精炼、深度研究 |
+| **meta-tools** | 4 | 元工具：知识图谱、想法精炼、深度研究、Skill Factory |
 | **session-management** | 6 | 会话管理：开始、结束、列表、状态、帮助、更新 |
 | **workflow-automation** | 7 | 工作流自动化：代码审查、TODO 管理、Prompt 工程、交接文档 |
 | **plugin-development** | 1 | 开发插件：项目脚手架 |
@@ -61,15 +61,15 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 | **agent-tools** | 41 | Agent 工具集：无障碍、AI开发、API Mock、调试、Docker、K8s 等 |
 | **super-claude** | 30 | SuperClaude 命令：分析、构建、设计、文档、Git、实现、测试等 |
 | **apple** | 5 | Apple 生态：Notes、Reminders、FindMy、iMessage、Computer Use |
-| **autonomous-ai-agents** | 6 | 自主 AI Agent：Claude Code、Codex、OpenCode、Hermes 配置 |
+| **autonomous-ai-agents** | 8 | 自主 AI Agent：Claude Code、Codex、OpenCode、Hermes 配置、Hermes Console、Xiaoma 中文 |
 | **data-science** | 1 | 数据科学：Jupyter 实时内核 |
 | **devops** | 3 | DevOps：Kanban 编排、macOS 代理诊断 |
 | **email** | 1 | 邮件：Himalaya CLI |
 | **github** | 6 | GitHub 工作流：认证、PR、代码审查、Issues、仓库管理 |
-| **media** | 4 | 媒体：YouTube 字幕、GIF 搜索、音乐生成、音频频谱 |
+| **media** | 5 | 媒体：YouTube 字幕、YouTube 完整工具包、GIF 搜索、音乐生成、音频频谱 |
 | **mlops** | 7 | MLOps：HuggingFace、vLLM、llama.cpp、AudioCraft、SAM、W&B |
-| **note-taking** | 2 | 笔记：Obsidian 仓库管理、Codex 桥接 |
-| **productivity** | 8 | 生产力：Airtable、Google Workspace、Notion、PowerPoint、Maps、PDF、OCR、Teams |
+| **note-taking** | 8 | 笔记：Obsidian 仓库管理、Codex 桥接、Obsidian Markdown/Bases/Canvas/CLI、Defuddle、Personal API |
+| **productivity** | 9 | 生产力：Airtable、Google Workspace、Notion、PowerPoint、Maps、PDF、OCR、Teams、Screenpipe |
 | **research** | 5 | 学术研究：arXiv、博客监控、LLM Wiki、Polymarket、论文写作 |
 | **smart-home** | 1 | 智能家居：Philips Hue |
 | **social-media** | 1 | 社交媒体：X/Twitter |
@@ -80,7 +80,7 @@ platforms: [claude-code, hermes, codex]   # 可用平台
 
 ## 统计
 
-- **总 Skill 数**: 222
+- **总 Skill 数**: 249
 - **总分类数**: 39
 - **平台兼容**: Claude Code / Hermes / Codex / Cursor
 - **每个 Skill**: 1 通用核心 + 3 平台挂载配置

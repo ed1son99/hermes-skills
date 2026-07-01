@@ -1,0 +1,4 @@
+interface:
+  display_name: ios-hig-design
+policy:
+  allow_implicit_invocation: true

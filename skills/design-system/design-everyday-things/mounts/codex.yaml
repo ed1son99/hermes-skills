@@ -1,0 +1,4 @@
+interface:
+  display_name: design-everyday-things
+policy:
+  allow_implicit_invocation: true

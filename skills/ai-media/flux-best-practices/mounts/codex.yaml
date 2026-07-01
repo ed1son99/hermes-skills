@@ -1,0 +1,4 @@
+interface:
+  display_name: flux-best-practices
+policy:
+  allow_implicit_invocation: true

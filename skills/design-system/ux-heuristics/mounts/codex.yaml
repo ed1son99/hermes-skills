@@ -1,0 +1,4 @@
+interface:
+  display_name: ux-heuristics
+policy:
+  allow_implicit_invocation: true
