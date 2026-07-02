@@ -48,11 +48,6 @@
 
 ## ⚙️ 技术环境
 
-### Hermes Agent
-- Profile: **desktop**
-- Provider: **DeepSeek**
-- 桌面默认模型: **deepseek-v4-flash**
-
 ### Obsidian Second Brain
 - 47个skill，推送到 ed1son99/obsidian-second-brain
 - 重要任务完成后记入 `hermes agent.md`
@@ -60,7 +55,7 @@
 ### Skills
 - 跨agent通用格式 (SKILL.md + mounts/)
 - 与 Claude Code / Codex / Cursor 兼容
-- 个人仓库: **ed1son99/skills** (249个技能)
+- 个人仓库: **ed1son99/skills** (255个技能)
 - ⚠️ 不经明确同意不安装新skill
 
 ---
